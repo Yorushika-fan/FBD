@@ -1,0 +1,34 @@
+{
+  "HomePage": {
+    "title": "क्लाउड विश्लेषण",
+    "about": "क्लाउड विश्लेषण Baidu Netdisk आधारित एक विश्लेषण उपकरण है जो Baidu Netdisk लिंक्स का तेजी से विश्लेषण करता है और डाउनलोड कार्यक्षमता प्रदान करता है।",
+    "getStarted": "शुरू करें",
+    "description": "Baidu Netdisk लिंक्स का तेज विश्लेषण",
+    "features": {
+      "fast": "अति तीव्र विश्लेषण",
+      "stable": "स्थिर और विश्वसनीय",
+      "simple": "उपयोग में आसान"
+    },
+    "actions": {
+      "parse": "विश्लेषण शुरू करें",
+      "download": "फ़ाइल डाउनलोड करें",
+      "login": "लॉग इन करें",
+      "register": "पंजीकरण करें"
+    },
+    "placeholder": {
+      "linkInput": "Baidu Netdisk साझा लिंक दर्ज करें",
+      "codeInput": "निष्कर्षण कोड दर्ज करें (यदि उपलब्ध है)"
+    }
+  },
+  "Menu": {
+    "home": "मुखपृष्ठ",
+    "about": "परिचय",
+    "download": "डाउनलोड",
+    "contact": "संपर्क"
+  },
+  "Common": {
+    "switchLanguage": "भाषा बदलें"
+  },
+  "hello-there": "",
+  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": ""
+}

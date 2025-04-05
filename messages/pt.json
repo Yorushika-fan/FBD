@@ -1,0 +1,34 @@
+{
+  "HomePage": {
+    "title": "Análise em Nuvem",
+    "about": "Análise em Nuvem é uma ferramenta de análise baseada no Baidu Netdisk que permite analisar rapidamente links do Baidu Netdisk e oferece funcionalidade de download.",
+    "getStarted": "Começar",
+    "description": "Análise rápida de links do Baidu Netdisk",
+    "features": {
+      "fast": "Análise ultrarrápida",
+      "stable": "Estável e confiável",
+      "simple": "Fácil de usar"
+    },
+    "actions": {
+      "parse": "Iniciar análise",
+      "download": "Baixar arquivo",
+      "login": "Entrar",
+      "register": "Registrar"
+    },
+    "placeholder": {
+      "linkInput": "Digite o link de compartilhamento do Baidu Netdisk",
+      "codeInput": "Digite o código de extração (se houver)"
+    }
+  },
+  "Menu": {
+    "home": "Início",
+    "about": "Sobre",
+    "download": "Baixar",
+    "contact": "Contato"
+  },
+  "Common": {
+    "switchLanguage": "Mudar idioma"
+  },
+  "hello-there": "",
+  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": ""
+}

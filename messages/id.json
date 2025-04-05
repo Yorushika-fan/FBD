@@ -1,0 +1,34 @@
+{
+  "Common": {
+    "switchLanguage": "Ganti bahasa"
+  },
+  "Menu": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "download": "Unduh",
+    "contact": "Kontak",
+    "howToUse": "Cara menggunakan"
+  },
+  "HomePage": {
+    "title": "DuPan Parser",
+    "about": "DuPan Parser adalah alat untuk mengurai tautan disk jaringan Baidu, menyediakan layanan analisis yang cepat dan stabil.",
+    "getStarted": "Mulai",
+    "howToUse": "Cara menggunakan",
+    "actions": {
+      "download": "Unduh berkas",
+      "login": "Masuk",
+      "parse": "Mulai mengurai",
+      "register": "Daftar"
+    },
+    "description": "Analisis tautan disk jaringan Baidu dengan cepat",
+    "features": {
+      "fast": "Analisis cepat",
+      "simple": "Sederhana dan mudah digunakan",
+      "stable": "Stabil dan andal"
+    },
+    "placeholder": {
+      "codeInput": "Silakan masukkan kode ekstraksi (jika ada)",
+      "linkInput": "Silakan masukkan tautan berbagi Baidu Netdisk"
+    }
+  }
+}

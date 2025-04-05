@@ -1,0 +1,34 @@
+{
+  "HomePage": {
+    "title": "Analisi Cloud",
+    "about": "Analisi Cloud è uno strumento di analisi basato su Baidu Netdisk che consente di analizzare rapidamente i link di Baidu Netdisk e offre funzionalità di download.",
+    "getStarted": "Inizia",
+    "description": "Analisi rapida dei link di Baidu Netdisk",
+    "features": {
+      "fast": "Analisi ad alta velocità",
+      "stable": "Stabile e affidabile",
+      "simple": "Facile da usare"
+    },
+    "actions": {
+      "parse": "Inizia analisi",
+      "download": "Scarica file",
+      "login": "Accedi",
+      "register": "Registrati"
+    },
+    "placeholder": {
+      "linkInput": "Inserisci il link di condivisione di Baidu Netdisk",
+      "codeInput": "Inserisci il codice di estrazione (se presente)"
+    }
+  },
+  "Menu": {
+    "home": "Home",
+    "about": "Chi siamo",
+    "download": "Scarica",
+    "contact": "Contatti"
+  },
+  "Common": {
+    "switchLanguage": "Cambia lingua"
+  },
+  "hello-there": "",
+  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": ""
+}

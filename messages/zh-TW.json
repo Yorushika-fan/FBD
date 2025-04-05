@@ -1,0 +1,33 @@
+{
+  "Common": {
+    "switchLanguage": "切換語言"
+  },
+  "HomePage": {
+    "title": "雲解析",
+    "about": "雲解析是一款基於百度網盤的解析工具，支持快速解析百度網盤鏈接，並提供下載功能。",
+    "getStarted": "開始使用",
+    "description": "快速解析百度網盤鏈接",
+    "features": {
+      "fast": "極速解析",
+      "stable": "穩定可靠",
+      "simple": "簡單易用"
+    },
+    "actions": {
+      "parse": "開始解析",
+      "download": "下載文件",
+      "login": "登入",
+      "register": "註冊"
+    },
+    "placeholder": {
+      "linkInput": "請輸入百度網盤分享鏈接",
+      "codeInput": "請輸入提取碼（如有）"
+    }
+  },
+  "Menu": {
+    "home": "首頁",
+    "about": "關於我們",
+    "download": "下載",
+    "contact": "聯繫我們"
+  },
+  "hello-there": ""
+}

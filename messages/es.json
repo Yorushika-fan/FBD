@@ -1,0 +1,34 @@
+{
+  "HomePage": {
+    "title": "Análisis en la Nube",
+    "about": "Análisis en la Nube es una herramienta de análisis basada en Baidu Netdisk que permite analizar rápidamente enlaces de Baidu Netdisk y proporciona funcionalidad de descarga.",
+    "getStarted": "Comenzar",
+    "description": "Análisis rápido de enlaces de Baidu Netdisk",
+    "features": {
+      "fast": "Análisis ultrarrápido",
+      "stable": "Estable y confiable",
+      "simple": "Fácil de usar"
+    },
+    "actions": {
+      "parse": "Comenzar análisis",
+      "download": "Descargar archivo",
+      "login": "Iniciar sesión",
+      "register": "Registrarse"
+    },
+    "placeholder": {
+      "linkInput": "Ingrese el enlace compartido de Baidu Netdisk",
+      "codeInput": "Ingrese el código de extracción (si lo hay)"
+    }
+  },
+  "Menu": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "download": "Descargar",
+    "contact": "Contacto"
+  },
+  "Common": {
+    "switchLanguage": "Cambiar idioma"
+  },
+  "hello-there": "",
+  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": ""
+}

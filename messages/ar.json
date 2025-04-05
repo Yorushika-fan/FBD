@@ -1,0 +1,34 @@
+{
+  "HomePage": {
+    "title": "تحليل السحابة",
+    "about": "تحليل السحابة هو أداة تحليل تعتمد على Baidu Netdisk، تدعم تحليل روابط Baidu Netdisk بسرعة وتوفر وظيفة التحميل.",
+    "getStarted": "ابدأ الآن",
+    "description": "تحليل سريع لروابط Baidu Netdisk",
+    "features": {
+      "fast": "تحليل فائق السرعة",
+      "stable": "موثوق ومستقر",
+      "simple": "سهل الاستخدام"
+    },
+    "actions": {
+      "parse": "بدء التحليل",
+      "download": "تحميل الملف",
+      "login": "تسجيل الدخول",
+      "register": "تسجيل"
+    },
+    "placeholder": {
+      "linkInput": "الرجاء إدخال رابط مشاركة Baidu Netdisk",
+      "codeInput": "الرجاء إدخال رمز الاستخراج (إن وجد)"
+    }
+  },
+  "Menu": {
+    "home": "الرئيسية",
+    "about": "عن الموقع",
+    "download": "تحميل",
+    "contact": "تواصل معنا"
+  },
+  "Common": {
+    "switchLanguage": "تبديل لغة"
+  },
+  "hello-there": "",
+  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": ""
+}

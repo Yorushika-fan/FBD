@@ -1,0 +1,34 @@
+{
+  "HomePage": {
+    "title": "클라우드 파싱",
+    "about": "클라우드 파싱은 Baidu Netdisk 기반의 파싱 도구로, Baidu Netdisk 링크를 빠르게 파싱하고 다운로드 기능을 제공합니다.",
+    "getStarted": "시작하기",
+    "description": "Baidu Netdisk 링크 빠른 파싱",
+    "features": {
+      "fast": "초고속 파싱",
+      "stable": "안정적이고 신뢰성 있는",
+      "simple": "사용하기 쉬운"
+    },
+    "actions": {
+      "parse": "파싱 시작",
+      "download": "파일 다운로드",
+      "login": "로그인",
+      "register": "회원가입"
+    },
+    "placeholder": {
+      "linkInput": "Baidu Netdisk 공유 링크를 입력하세요",
+      "codeInput": "추출 코드를 입력하세요 (있는 경우)"
+    }
+  },
+  "Menu": {
+    "home": "홈",
+    "about": "소개",
+    "download": "다운로드",
+    "contact": "문의하기"
+  },
+  "Common": {
+    "switchLanguage": "언어 변경"
+  },
+  "hello-there": "",
+  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": ""
+}

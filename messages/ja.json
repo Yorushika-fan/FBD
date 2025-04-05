@@ -1,0 +1,34 @@
+{
+  "HomePage": {
+    "title": "クラウド解析",
+    "about": "クラウド解析はBaidu Netdiskベースの解析ツールで、Baidu Netdiskのリンクを素早く解析し、ダウンロード機能を提供します。",
+    "getStarted": "始める",
+    "description": "Baidu Netdiskリンクの高速解析",
+    "features": {
+      "fast": "超高速解析",
+      "stable": "安定性と信頼性",
+      "simple": "使いやすい"
+    },
+    "actions": {
+      "parse": "解析開始",
+      "download": "ファイルをダウンロード",
+      "login": "ログイン",
+      "register": "登録"
+    },
+    "placeholder": {
+      "linkInput": "Baidu Netdisk共有リンクを入力してください",
+      "codeInput": "抽出コードを入力してください（ある場合）"
+    }
+  },
+  "Menu": {
+    "home": "ホーム",
+    "about": "私たちについて",
+    "download": "ダウンロード",
+    "contact": "お問い合わせ"
+  },
+  "Common": {
+    "switchLanguage": "言語を切り替え"
+  },
+  "hello-there": "",
+  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": ""
+}

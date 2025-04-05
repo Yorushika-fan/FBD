@@ -1,0 +1,32 @@
+{
+  "Common": {
+    "switchLanguage": "Switch language"
+  },
+  "Menu": {
+    "home": "Home",
+    "about": "About",
+    "download": "Download",
+    "contact": "Contact"
+  },
+  "HomePage": {
+    "title": "DuPan Parser",
+    "about": "DuPan Parser is a tool for parsing Baidu network disk links, providing fast and stable analysis services.",
+    "getStarted": "Get Started",
+    "actions": {
+      "download": "Download the file",
+      "login": "Log in",
+      "parse": "Start parsing",
+      "register": "register"
+    },
+    "description": "Quickly analyze Baidu network disk link",
+    "features": {
+      "fast": "Speedy analysis",
+      "simple": "Simple and easy to use",
+      "stable": "Stable and reliable"
+    },
+    "placeholder": {
+      "codeInput": "Please enter the extraction code (if any)",
+      "linkInput": "Please enter the Baidu Netdisk sharing link"
+    }
+  }
+}

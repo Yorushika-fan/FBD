@@ -1,0 +1,72 @@
+{
+  "Common": {
+    "switchLanguage": "切换语言"
+  },
+  "Menu": {
+    "home": "首页",
+    "about": "关于我们",
+    "download": "下载",
+    "contact": "联系我们",
+    "howToUse": "怎么使用"
+  },
+  "parse": {
+    "step1": "输入链接",
+    "step2": "验证密码",
+    "step3": "下载文件",
+    "verifyPassword": "验证密码",
+    "getPassword": "获取密码",
+    "loading": "验证中...",
+    "verify": "验证",
+    "download": "下载文件",
+    "success": "验证成功！您现在可以下载文件了。",
+    "inputUrl": "百度网盘链接",
+    "inputPassword": "提取码",
+    "inputPasswordHint": "请输入正确的提取码",
+    "parse": "解析",
+    "pasteSuccess": "发现提取码,自动填充",
+    "parseError": "解析失败,请检查链接和提取码",
+    "title": "云解析",
+    "reset": "解析其他文件"
+  },
+  "HowToUse": {
+    "title": "怎么使用",
+    "videoTitle": "视频教程",
+    "description": "快速解析百度网盘链接",
+    "tipsTitle": "使用提示",
+    "tips": ["使用提示1", "使用提示2", "使用提示3", "使用提示4", "使用提示5"],
+    "step1": {
+      "title": "输入链接",
+      "description": "输入百度网盘链接"
+    },
+    "step2": {
+      "title": "验证密码",
+      "description": "输入提取码"
+    },
+    "step3": {
+      "title": "下载文件",
+      "description": "点击下载按钮，即可下载文件"
+    }
+  },
+  "HomePage": {
+    "title": "FBD",
+    "about": "FBD是一款基于百度网盘的解析工具，支持快速解析百度网盘链接，并提供下载功能。",
+    "getStarted": "开始使用",
+    "description": "快速解析百度网盘链接",
+    "howToUse": "使用教程",
+    "features": {
+      "fast": "极速解析",
+      "stable": "稳定可靠",
+      "simple": "简单易用"
+    },
+    "actions": {
+      "parse": "开始解析",
+      "download": "下载文件",
+      "login": "登录",
+      "register": "注册"
+    },
+    "placeholder": {
+      "linkInput": "请输入百度网盘分享链接",
+      "codeInput": "请输入提取码（如有）"
+    }
+  }
+}
