@@ -2,19 +2,19 @@
 
 import { getFileIcon } from '@/utils/fileIcons';
 import type { BaiduFile } from '@/types/baidu';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useBaiduStore } from '@/store/baidu';
 import { BaiduClient } from '@/lib/baidu/baiduClient';
 import { DownloadOptions } from '@/components/DownloadOptions';
 import { formatFileSize } from '@/lib/utils';
-import { Tree, TreeCheckboxSelectionKeys } from 'primereact/tree';
+import { Tree, TreeCheckboxSelectionKeys, TreeSelectionEvent } from 'primereact/tree';
 import { TreeNode } from 'primereact/treenode';
 import { toast } from 'sonner';
 
 const Download = () => {
   const [selectedKeys, setSelectedKeys] = useState<TreeCheckboxSelectionKeys | null>(null);
-  const [expandedKeys, setExpandedKeys] = useState<any>({});
+  const [expandedKeys, setExpandedKeys] = useState<Record<string, boolean>>({});
   const [loading, setLoading] = useState(true);
   const { getFileList } = BaiduClient;
   const [nodeLoading, setNodeLoading] = useState(false);
@@ -22,27 +22,21 @@ const Download = () => {
   const { node, isInitialized, surl, password, setNodeChildren } = useBaiduStore();
   const [selectedFiles, setSelectedFiles] = useState<{ id: string; path: string }[]>([]);
 
-  useEffect(() => {
-    if (selectedKeys) {
-      const paths = Object.keys(selectedKeys);
-      const fsIds = paths
-        .map((path) => findNodeByKey(treeNodes, path))
-        .filter((node) => node?.leaf)
-        .map((node) => {
-          return {
-            id: node?.data.id,
-            path: node?.data.path,
-          };
-        });
-
-      setSelectedFiles(fsIds);
-      console.log(fsIds, 'fsIds');
-      console.log(selectedFiles, 'selectedFiles');
+  const findNodeByKey = useCallback((nodes: TreeNode[], key: string): TreeNode | null => {
+    for (const node of nodes) {
+      if (node.key === key) {
+        return node;
+      }
+      if (node.children) {
+        const found = findNodeByKey(node.children, key);
+        if (found) return found;
+      }
     }
-  }, [selectedKeys]);
+    return null;
+  }, []);
 
   // 将 BaiduFile[] 转换为 Tree 所需的数据结构
-  const convertToTreeNodes = (nodes: BaiduFile[]): any[] => {
+  const convertToTreeNodes = useCallback((nodes: BaiduFile[]): TreeNode[] => {
     return nodes.map((file) => {
       const isFile = file.isdir == 0;
       const Icon = getFileIcon(file.server_filename, isFile);
@@ -58,7 +52,8 @@ const Download = () => {
 
       return {
         key: file.path,
-        label: (
+        label: file.server_filename,
+        template: () => (
           <div className="flex w-full items-center justify-between gap-4">
             <span className="truncate">{file.server_filename}</span>
             {isFile && (
@@ -77,27 +72,38 @@ const Download = () => {
         selectable: isFile || hasAllChildrenLoaded,
       };
     });
-  };
+  }, []);
 
   // 转换文件树数据
   const treeNodes = useMemo(() => {
     if (!node || node.length === 0) return [];
     return convertToTreeNodes(node);
-  }, [node]);
+  }, [node, convertToTreeNodes]);
+
+  useEffect(() => {
+    if (selectedKeys) {
+      const paths = Object.keys(selectedKeys);
+      const fsIds = paths
+        .map((path) => findNodeByKey(treeNodes, path))
+        .filter((node) => node?.leaf)
+        .map((node) => ({
+          id: node?.data.id,
+          path: node?.data.path,
+        }));
+
+      setSelectedFiles(fsIds);
+    }
+  }, [selectedKeys, treeNodes, findNodeByKey]);
+
   useEffect(() => {
     console.log(node, '刷新了');
     const checkAndLoadFiles = async () => {
       try {
-        // // 等待 store 初始化完成
         if (!isInitialized) return;
-
-        // store 已初始化，但没有数据，说明确实是没有文件
         if (!node || node.length === 0) {
-          console.log('没有找到文件，重定向到解析页面');
           router.push('/parse');
-          return;
         }
-      } catch (error) {
+      } catch {
         router.push('/parse');
       } finally {
         if (isInitialized) {
@@ -109,64 +115,44 @@ const Download = () => {
     checkAndLoadFiles();
   }, [router, node, isInitialized]);
 
-  const handleNodeExpand = async (e: any) => {
-    const path = e.node.key;
+  const handleNodeExpand = async (e: { node: TreeNode }) => {
+    const path = e.node.key as string;
     const leaf = e.node.leaf;
-    // 如果是目录且没有子节点或子节点为空数组，则加载子目录
     if (!leaf && !e.node.children) {
-      // console.log(e.node, 'e.node');
       try {
         toast.loading('加载中...');
         setNodeLoading(true);
-        console.log(' 未加载的目录', path);
-        console.log(surl, 'surl');
-        console.log(password, 'password');
         const res = await getFileList({
           surl,
           password,
           isroot: false,
           dir: path,
         });
-        console.log(res.data.list, 'res.data.list');
         await setNodeChildren(path, res.data.list);
-      } catch (error) {
+      } catch {
         toast.error('加载目录失败');
-        console.error('加载目录失败:', error);
       } finally {
         setNodeLoading(false);
         toast.dismiss();
       }
     }
-    // 更新展开状态
     setExpandedKeys({
       ...expandedKeys,
       [path]: true,
     });
   };
 
-  const findNodeByKey = (nodes: TreeNode[], key: string): TreeNode | null => {
-    for (const node of nodes) {
-      if (node.key === key) {
-        return node;
-      }
-      if (node.children) {
-        const found = findNodeByKey(node.children, key);
-        if (found) return found;
-      }
-    }
-    return null;
-  };
-
-  const handleNodeCollapse = (e: any) => {
-    const path = e.node.key;
+  const handleNodeCollapse = (e: { node: TreeNode }) => {
+    const path = e.node.key as string;
     const newExpandedKeys = { ...expandedKeys };
     delete newExpandedKeys[path];
     setExpandedKeys(newExpandedKeys);
   };
 
-  const handleSelectChange = (e: any) => {
-    console.log(e.value, 'e.value');
-    setSelectedKeys(e.value);
+  const handleSelectChange = (e: TreeSelectionEvent) => {
+    if (e.value) {
+      setSelectedKeys(e.value as TreeCheckboxSelectionKeys);
+    }
   };
 
   const handleSelectAll = () => {};
@@ -223,8 +209,8 @@ const Download = () => {
           <button
             className="btn btn-primary btn-sm"
             onClick={() => {
-              const allKeys = treeNodes.reduce((acc: any, node: any) => {
-                acc[node.key] = true;
+              const allKeys = treeNodes.reduce((acc: Record<string, boolean>, node: TreeNode) => {
+                acc[node.key as string] = true;
                 return acc;
               }, {});
               setExpandedKeys(allKeys);

@@ -51,8 +51,6 @@ export default function LanguageSwitcher() {
   const pathname = usePathname();
   const t = useTranslations('Common');
 
-  const currentLanguage = languages.find((lang) => lang.code === locale) || languages[0];
-
   const handleLanguageChange = (languageCode: string) => {
     router.replace(pathname, { locale: languageCode });
     setIsOpen(false);

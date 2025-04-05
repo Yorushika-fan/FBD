@@ -4,7 +4,7 @@ import { AxiosError } from 'axios';
 
 interface BaiduApiResponse {
   message?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export async function POST(request: Request) {
@@ -28,10 +28,6 @@ export async function POST(request: Request) {
 
       case 'checkFileStatus':
         result = await BaiduAPI.checkFileStatus(params.fsId);
-        break;
-
-      case 'getShareInfo':
-        result = await BaiduAPI.getShareInfo(params.surl);
         break;
 
       default:

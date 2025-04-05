@@ -44,6 +44,7 @@ export default function LoginPage() {
         router.push('/dashboard');
       }
     } catch (err) {
+      console.log(err, 'err');
       setError('发生错误，请重试');
     } finally {
       setIsLoading(false);

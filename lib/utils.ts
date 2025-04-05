@@ -1,6 +1,5 @@
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import axios from 'axios';
 /**
  * 合并 className，使用 tailwind-merge 处理冲突
  */
@@ -86,14 +85,6 @@ export function openUri(uri: string): Promise<boolean> {
  * @param userAgent Optional user agent string
  * @returns Promise<boolean> - true if the task was added successfully
  */
-const sendRPC = async (url: string, filename: string, dir?: string, userAgent?: string) => {
-  const response = await axios.post('http://127.0.0.1:16800/jsonrpc', {
-    jsonrpc: '2.0',
-    id: 'motrix',
-    method: 'aria2.addUri',
-    params: [[url]],
-  });
-};
 
 const getBaiduUrl = (value: string) => {
   const result: {
@@ -107,16 +98,16 @@ const getBaiduUrl = (value: string) => {
   const codeRegex = /提取码([:：])\s*(([a-zA-Z]|[0-9]){4})/;
   // 数据验证
   if (!regex.test(value)) return result;
-  let baiduUrl = regex.exec(value)?.[0];
+  const baiduUrl = regex.exec(value)?.[0];
   if (baiduUrl === undefined) return result;
-  let uri = new URL(baiduUrl);
+  const uri = new URL(baiduUrl);
   // 来源验证
   if (uri.host !== 'pan.baidu.com') return result;
   // 提取码
   result.pwd = uri.searchParams.get('pwd') || codeRegex.exec(value)?.[2] || '';
   // 短链接
-  result.surl = uri.searchParams.has('surl') ? `1${uri.searchParams.get('surl')!!}` : uri.pathname.substring(3);
+  result.surl = uri.searchParams.has('surl') ? `1${uri.searchParams.get('surl')!}` : uri.pathname.substring(3);
   return result;
 };
 
-export { cn, formatFileSize, isFile, sendRPC, getBaiduUrl };
+export { cn, formatFileSize, isFile, getBaiduUrl };

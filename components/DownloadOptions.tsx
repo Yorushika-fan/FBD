@@ -11,7 +11,6 @@ import { BaiduClient } from '@/lib/baidu/baiduClient';
 import { useBaiduStore } from '@/store/baidu';
 import path from 'path';
 import axios from 'axios';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 interface RPCConfig {
   endpoint: string;
@@ -38,21 +37,21 @@ export const DownloadOptions = ({ files }: { files: { id: string; path: string }
   const { surl, shareInfo } = useBaiduStore();
 
   // 在组件内添加状态来控制命令的显示
-  const [cmdCommands, setCmdCommands] = useState<string[]>([]);
-  const [bashCommands, setBashCommands] = useState<string[]>([]);
+  // const [cmdCommands, setCmdCommands] = useState<string[]>([]);
+  // const [bashCommands, setBashCommands] = useState<string[]>([]);
 
-  // 在组件内添加状态来控制当前选择的命令类型
-  const [commandType, setCommandType] = useState<'cmd' | 'bash'>('cmd');
+  // // 在组件内添加状态来控制当前选择的命令类型
+  // const [commandType, setCommandType] = useState<'cmd' | 'bash'>('cmd');
 
   // 复制到剪贴板的通用函数
-  const copyToClipboard = async (text: string, message: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      toast.success(message);
-    } catch (err) {
-      toast.error('复制失败，请手动复制');
-    }
-  };
+  // const copyToClipboard = async (text: string, message: string) => {
+  //   try {
+  //     await navigator.clipboard.writeText(text);
+  //     toast.success(message);
+  //   } catch (err) {
+  //     toast.error('复制失败，请手动复制');
+  //   }
+  // };
 
   const handleDownloadLink = async () => {
     console.log('handleDownload', files);
@@ -89,6 +88,7 @@ export const DownloadOptions = ({ files }: { files: { id: string; path: string }
       });
       toast.success('测试 RPC 连接成功');
     } catch (err) {
+      console.log(err, 'err');
       setRpcConfig({ ...rpcConfig, status: { connected: false } });
       toast.error('测试 RPC 连接失败');
     }
@@ -104,7 +104,7 @@ export const DownloadOptions = ({ files }: { files: { id: string; path: string }
     const promises = dlinkFiles.map(async (file) => {
       const { fileName, dlink, from } = file;
       const dir = files.find((file) => file.id === from)?.path;
-      const res = await axios.post(rpcConfig.endpoint, {
+      await axios.post(rpcConfig.endpoint, {
         jsonrpc: '2.0',
         id: 'f4pan',
         method: 'aria2.addUri',

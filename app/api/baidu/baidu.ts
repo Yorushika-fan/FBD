@@ -1,7 +1,13 @@
 import axios from 'axios';
 import { TransferParams, GetFileListParams } from '@/types/baidu';
 
-const Success = (data: any) => {
+interface ApiResponse<T> {
+  code: number;
+  message: string;
+  data?: T;
+}
+
+const Success = <T>(data: T): ApiResponse<T> => {
   return {
     code: 0,
     message: 'success',
@@ -75,8 +81,22 @@ const getFileList = async (params: GetFileListParams) => {
   return Success({ list, shareid, uk, seckey });
 };
 
+interface TransferResponse {
+  errno: number;
+  extra: {
+    list: Array<{
+      to: string;
+      from_fs_id: string;
+    }>;
+  };
+  task_id?: string;
+}
+
 // 传输文件
-const transferFile = async (params: TransferParams, Cookie: string): Promise<{ errno: number; list: any }> => {
+const transferFile = async (
+  params: TransferParams,
+  Cookie: string,
+): Promise<{ errno: number; list: Array<{ to: string; from_fs_id: string }> }> => {
   const { shareId, uk, fsId, randsk, shareUrl } = params;
 
   const tokenResponse = await axios.get('https://pan.baidu.com/api/gettemplatevariable', {
@@ -105,7 +125,7 @@ const transferFile = async (params: TransferParams, Cookie: string): Promise<{ e
     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
   };
   const url = `https://pan.baidu.com/share/transfer?shareid=${shareId}&from=${uk}&channel=chunlei&sekey=${encodedRandsk}&ondup=newcopy&web=1&app_id=250528&bdstoken=${bdstoken}&logid=QTU4NjczRTM3OEFDNkI1NUQ0QzExQ0VFOEY5M0VGREQ6Rkc9MQ==&clienttype=0`;
-  const response = await axios.post<any>(url, data, {
+  const response = await axios.post<TransferResponse>(url, data, {
     headers: myHeaders,
   });
   console.log(response.data, 'response.data');
@@ -152,9 +172,9 @@ const getDownloadLink = async (params: TransferParams) => {
     return Error('转存失败');
   }
   console.log(list, 'list1111');
-  const parsePath = process.env.BAIDU_PARSE_DIR;
+  const parsePath = process.env.BAIDU_PARSE_DIR || '';
 
-  const promises = list.map(async (item: any) => {
+  const promises = list.map(async (item: { to: string; from_fs_id: string }) => {
     const { to, from_fs_id } = item;
     const encodedPath = encodeURIComponent(to);
 
@@ -191,15 +211,6 @@ const checkTaskStatus = async (taskId: string, bdstoken: string, Cookie: string)
   return taskResponse.data;
 };
 
-// 其他百度相关的函数
-const checkFileStatus = async (fsId: string) => {
-  // 实现检查文件状态的逻辑
-};
-
-const getShareInfo = async (surl: string) => {
-  // 实现获取分享信息的逻辑
-};
-
 const getPathComponents = (fullPath: string) => {
   // Remove any leading or trailing slashes first
   const cleanPath = fullPath.replace(/^\/+|\/+$/g, '');
@@ -225,4 +236,13 @@ const getPathComponents = (fullPath: string) => {
   };
 };
 
-export { getShareInfo, getFileList, transferFile, getDownloadLink, checkFileStatus };
+const checkFileStatus = async (fsId: number) => {
+  try {
+    const response = await axios.get(`https://pan.baidu.com/api/rapidupload?fsids=[${fsId}]`);
+    return Success(response.data);
+  } catch (error) {
+    throw error;
+  }
+};
+
+export { Success, checkFileStatus, getFileList, transferFile, getDownloadLink, checkTaskStatus, getPathComponents };

@@ -7,6 +7,7 @@ import { useBaiduStore } from '@/store/baidu';
 import { toast } from 'sonner';
 import { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+
 interface ParseCardProps {
   onParseSuccess: (surl: string, password: string) => void;
 }
@@ -26,8 +27,11 @@ const ParseCard = ({ onParseSuccess }: ParseCardProps) => {
       setPassword(pwd);
       toast.success(t('pasteSuccess'));
     }
-    setSurl(surl);
-  }, [url]);
+    if (surl) {
+      setSurl(surl);
+    }
+  }, [url, setPassword, setSurl, t]);
+
   const handleParse = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 

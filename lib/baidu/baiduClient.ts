@@ -1,12 +1,5 @@
 import { request } from '@/utils/axios';
-import { BaiduApiUrl, BaiduApiType, GetFileListParams } from '@/types/baidu';
-import { TransferParams } from '@/types/baidu';
-
-interface UrlResponse {
-  urls: Array<{
-    url: string;
-  }>;
-}
+import { BaiduApiUrl, BaiduApiType, GetFileListParams, BaiduFile, TransferParams } from '@/types/baidu';
 
 /**
  * 百度网盘解析相关工具方法
@@ -71,46 +64,11 @@ export const BaiduClient = {
         },
       });
 
-      return response.list.some((item: any) => item.path === '/parse_file' && item.isdir === 1);
+      return response.list.some((item: BaiduFile) => item.path === '/parse_file' && item.isdir === 1);
     } catch {
       return false;
     }
   },
-
-  /**
-   * 创建新目录
-   */
-  // async createNewDir(cookie: string): Promise<boolean> {
-  //   try {
-  //     const response = await request.post(
-  //       'https://pan.baidu.com/api/create',
-  //       {
-  //         path: '//parse_file',
-  //         isdir: 1,
-  //         size: '',
-  //         block_list: '[]',
-  //         method: 'post',
-  //         dataType: 'json',
-  //       },
-  //       {
-  //         params: {
-  //           a: 'commit',
-  //           channel: 'chunlei',
-  //           app_id: 250528,
-  //           web: 1,
-  //           clienttype: 0,
-  //         },
-  //         headers: {
-  //           Cookie: cookie,
-  //         },
-  //       },
-  //     );
-
-  //     return response.errno === 0;
-  //   } catch {
-  //     return false;
-  //   }
-  // },
 
   /**
    * 创建短链接
