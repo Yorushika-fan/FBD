@@ -4,17 +4,18 @@ import { useState } from 'react';
 import { Link } from '@/i18n/navigation';
 import { Menu, X } from 'lucide-react';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 const Header = () => {
   const t = useTranslations('Menu');
+  const locale = useLocale();
 
   const navigation = [
     { name: t('home'), href: '/' },
     { name: t('about'), href: '/about' },
     { name: t('download'), href: '/download' },
-    { name: t('contact'), href: '/contact' },
-    { name: t('howToUse'), href: '/howToUse' },
+    // { name: t('contact'), href: '/' },
+    { name: t('howToUse'), href: '/how-to-use' },
   ];
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -37,7 +38,7 @@ const Header = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           {navigation.map((item) => (
-            <li key={item.name}>
+            <li key={`${item.name}-${locale}`}>
               <Link href={item.href} className="hover:bg-base-200">
                 {item.name}
               </Link>
@@ -74,7 +75,7 @@ const Header = () => {
           </div>
           <ul className="menu gap-2">
             {navigation.map((item) => (
-              <li key={item.name}>
+              <li key={`${item.name}-${locale}`}>
                 <Link href={item.href} className="hover:bg-base-300" onClick={() => setIsDrawerOpen(false)}>
                   {item.name}
                 </Link>
