@@ -1,34 +1,138 @@
 {
   "Common": {
-    "switchLanguage": "Ganti bahasa"
+    "switchLanguage": "Ganti Bahasa"
   },
   "Menu": {
     "home": "Beranda",
     "about": "Tentang",
     "download": "Unduh",
-    "contact": "Kontak",
-    "howToUse": "Cara menggunakan"
+    "contact": "Dapatkan Kata Sandi",
+    "howToUse": "Cara Menggunakan"
+  },
+  "About": {
+    "title": "Tentang Saya",
+    "description": "Saya adalah pemula yang sedang belajar Next.js, dan proyek ini adalah proyek Next.js pertama saya. Saya harap Anda menyukainya.",
+    "skills": "Keterampilan Saya",
+    "contact": "Hubungi Saya"
+  },
+  "parse": {
+    "step1": "Masukkan Tautan",
+    "step2": "Verifikasi Kata Sandi",
+    "step3": "Unduh Berkas",
+    "verifyPassword": "Verifikasi Kata Sandi",
+    "getPassword": "Dapatkan Kata Sandi",
+    "loading": "Memverifikasi...",
+    "verify": "Verifikasi",
+    "download": "Unduh Berkas",
+    "success": "Verifikasi berhasil! Anda sekarang dapat mengunduh berkas.",
+    "inputUrl": "Tautan Baidu Netdisk",
+    "inputUrlPlaceholder": "Silakan masukkan tautan Baidu Netdisk",
+    "inputUrlHint": "Silakan masukkan tautan Baidu Netdisk yang valid",
+    "inputPassword": "Kode Ekstraksi",
+    "inputPasswordPlaceholder": "Silakan masukkan kode ekstraksi",
+    "inputPasswordHint": "Silakan masukkan kode ekstraksi yang valid",
+    "parse": "Analisis",
+    "pasteSuccess": "Kode ekstraksi ditemukan, diisi otomatis",
+    "parseError": "Analisis gagal, silakan periksa tautan dan kode ekstraksi",
+    "title": "Analisis Cloud",
+    "reset": "Analisis Berkas Lain"
+  },
+  "HowToUse": {
+    "title": "Cara Menggunakan",
+    "videoTitle": "Video Tutorial",
+    "description": "Analisis cepat tautan Baidu Netdisk",
+    "tipsTitle": "Tips Penggunaan",
+    "tips": ["Tips Penggunaan 1", "Tips Penggunaan 2", "Tips Penggunaan 3", "Tips Penggunaan 4", "Tips Penggunaan 5"],
+    "step1": {
+      "title": "Masukkan Tautan",
+      "description": "Masukkan tautan Baidu Netdisk"
+    },
+    "step2": {
+      "title": "Verifikasi Kata Sandi",
+      "description": "Masukkan kode ekstraksi"
+    },
+    "step3": {
+      "title": "Unduh Berkas",
+      "description": "Klik tombol unduh untuk mengunduh berkas"
+    },
+    "faqTitle": "FAQ",
+    "faq": {
+      "1": {
+        "question": "Mengapa analisis gagal?",
+        "answer": "Silakan periksa apakah tautan dan kode ekstraksi benar"
+      },
+      "2": {
+        "question": "Apa yang harus dilakukan jika verifikasi kata sandi gagal?",
+        "answer": "Kunjungi akun resmi untuk mendapatkan kata sandi terbaru"
+      },
+      "3": {
+        "question": "Apa yang harus dilakukan jika verifikasi analisis gagal?",
+        "answer": "Coba hapus cache browser atau ganti browser"
+      },
+      "4": {
+        "question": "Apa yang harus dilakukan jika koneksi RPC gagal?",
+        "answer": "Silakan klik Cara Menggunakan dan ikuti tutorial untuk menghubungkan RPC"
+      },
+      "5": {
+        "question": "Masalah Lain",
+        "answer": "Hubungi penulis"
+      }
+    }
+  },
+  "Download": {
+    "title": "Unduh Analisis Cloud",
+    "selectDownloadMethod": "Pilih Metode Unduh",
+    "apiDownload": "Unduh API",
+    "rpcDownload": "Unduh RPC",
+    "rpcAddress": "Alamat RPC",
+    "rpcAddressPlaceholder": "Silakan masukkan alamat RPC",
+    "rpcAddressHint": "Silakan masukkan alamat RPC yang valid",
+    "noFiles": "Silakan analisis tautan terlebih dahulu, mengarahkan...",
+    "testConnection": "Uji Koneksi",
+    "connected": "Terhubung (Aria2 {version})",
+    "notConnected": "Tidak Terhubung",
+    "downloadDirectory": "Direktori Unduh",
+    "userAgent": "User-Agent",
+    "startDownload": "Mulai Unduh",
+    "testRPCConnectionSuccess": "Uji koneksi RPC berhasil",
+    "testRPCConnectionFailed": "Uji koneksi RPC gagal",
+    "noDownloadableFiles": "Tidak ada berkas yang dapat diunduh",
+    "gettingDownloadLink": "Mendapatkan tautan unduh...",
+    "downloadSelectedItems": "Unduh item yang dipilih ({count})",
+    "addedToRPCDownloadQueue": "Ditambahkan ke antrian unduh RPC"
   },
   "HomePage": {
-    "title": "DuPan Parser",
-    "about": "DuPan Parser adalah alat untuk mengurai tautan disk jaringan Baidu, menyediakan layanan analisis yang cepat dan stabil.",
+    "title": "FBD",
+    "about": "FBD adalah alat analisis Baidu Netdisk yang mendukung analisis cepat tautan Baidu Netdisk dan menyediakan fungsionalitas unduh.",
     "getStarted": "Mulai",
-    "howToUse": "Cara menggunakan",
+    "description": "Analisis cepat tautan Baidu Netdisk",
+    "howToUse": "Tutorial",
+    "totalParsed": "Berkas Dianalisis",
+    "totalParsedDesc": "berkas berhasil dianalisis",
+    "activeUsers": "Pengguna Aktif",
+    "activeUsersDesc": "pengguna sedang menggunakan",
+    "successRate": "Tingkat Keberhasilan",
+    "successRateDesc": "Stabil dan Andal",
+    "featuresTitle": "Keunggulan Utama",
+    "totalDownloads": "Total Unduhan",
+    "totalDownloadsDesc": "unduhan berkas",
+    "features": {
+      "fast": "Analisis Cepat",
+      "stable": "Stabil dan Andal",
+      "simple": "Mudah Digunakan",
+      "fastDesc": "Analisis cepat, tidak perlu menunggu, tautan unduh instan",
+      "stableDesc": "Stabil dan andal, tingkat keberhasilan analisis 99.9%",
+      "simpleDesc": "Mudah digunakan, unduh berkas dalam tiga langkah"
+    },
     "actions": {
-      "download": "Unduh berkas",
+      "parse": "Mulai Analisis",
+      "download": "Unduh Berkas",
       "login": "Masuk",
-      "parse": "Mulai mengurai",
       "register": "Daftar"
     },
-    "description": "Analisis tautan disk jaringan Baidu dengan cepat",
-    "features": {
-      "fast": "Analisis cepat",
-      "simple": "Sederhana dan mudah digunakan",
-      "stable": "Stabil dan andal"
-    },
     "placeholder": {
-      "codeInput": "Silakan masukkan kode ekstraksi (jika ada)",
-      "linkInput": "Silakan masukkan tautan berbagi Baidu Netdisk"
+      "linkInput": "Silakan masukkan tautan berbagi Baidu Netdisk",
+      "codeInput": "Silakan masukkan kode ekstraksi (jika ada)"
     }
   }
 }

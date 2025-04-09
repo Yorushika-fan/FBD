@@ -1,13 +1,26 @@
 {
   "HomePage": {
-    "title": "تحليل السحابة",
-    "about": "تحليل السحابة هو أداة تحليل تعتمد على Baidu Netdisk، تدعم تحليل روابط Baidu Netdisk بسرعة وتوفر وظيفة التحميل.",
+    "title": "FBD",
+    "about": "FBD هو أداة تحليل Baidu Netdisk تدعم التحليل السريع لروابط Baidu Netdisk وتوفر وظيفة التحميل.",
     "getStarted": "ابدأ الآن",
-    "description": "تحليل سريع لروابط Baidu Netdisk",
+    "description": "تحليل روابط Baidu Netdisk بسرعة",
+    "howToUse": "البرنامج التعليمي",
+    "totalParsed": "الملفات المحللة",
+    "totalParsedDesc": "ملف تم تحليله بنجاح",
+    "activeUsers": "المستخدمون النشطون",
+    "activeUsersDesc": "مستخدم يستخدم حالياً",
+    "successRate": "معدل النجاح",
+    "successRateDesc": "مستقر وموثوق",
+    "featuresTitle": "المزايا الأساسية",
+    "totalDownloads": "إجمالي التحميلات",
+    "totalDownloadsDesc": "تحميل ملف",
     "features": {
-      "fast": "تحليل فائق السرعة",
-      "stable": "موثوق ومستقر",
-      "simple": "سهل الاستخدام"
+      "fast": "تحليل سريع",
+      "stable": "مستقر وموثوق",
+      "simple": "سهل الاستخدام",
+      "fastDesc": "تحليل سريع، لا انتظار، روابط تحميل فورية",
+      "stableDesc": "مستقر وموثوق، معدل نجاح التحليل 99.9%",
+      "simpleDesc": "سهل الاستخدام، اكتمال تحميل الملف في ثلاث خطوات"
     },
     "actions": {
       "parse": "بدء التحليل",
@@ -22,13 +35,106 @@
   },
   "Menu": {
     "home": "الرئيسية",
-    "about": "عن الموقع",
+    "about": "حول",
     "download": "تحميل",
-    "contact": "تواصل معنا"
+    "contact": "الحصول على كلمة المرور",
+    "howToUse": "كيفية الاستخدام"
   },
   "Common": {
-    "switchLanguage": "تبديل لغة"
+    "switchLanguage": "تغيير اللغة"
   },
   "hello-there": "",
-  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": ""
+  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": "",
+  "About": {
+    "title": "حول",
+    "description": "أنا مبتدئ في تعلم Next.js، وهذا المشروع هو أول مشروع لي في Next.js. أتمنى أن يعجبك.",
+    "skills": "مهاراتي",
+    "contact": "اتصل بي"
+  },
+  "parse": {
+    "step1": "أدخل الرابط",
+    "step2": "تحقق من كلمة المرور",
+    "step3": "تحميل الملف",
+    "verifyPassword": "تحقق من كلمة المرور",
+    "getPassword": "الحصول على كلمة المرور",
+    "loading": "جاري التحقق...",
+    "verify": "تحقق",
+    "download": "تحميل الملف",
+    "success": "تم التحقق بنجاح! يمكنك الآن تحميل الملف.",
+    "inputUrl": "رابط Baidu Netdisk",
+    "inputUrlPlaceholder": "الرجاء إدخال رابط Baidu Netdisk",
+    "inputUrlHint": "الرجاء إدخال رابط Baidu Netdisk صالح",
+    "inputPassword": "رمز الاستخراج",
+    "inputPasswordPlaceholder": "الرجاء إدخال رمز الاستخراج",
+    "inputPasswordHint": "الرجاء إدخال رمز استخراج صالح",
+    "parse": "تحليل",
+    "pasteSuccess": "تم العثور على رمز الاستخراج، تم التعبئة التلقائية",
+    "parseError": "فشل التحليل، يرجى التحقق من الرابط ورمز الاستخراج",
+    "title": "تحليل سحابي",
+    "reset": "تحليل ملف آخر"
+  },
+  "HowToUse": {
+    "title": "كيفية الاستخدام",
+    "videoTitle": "فيديو تعليمي",
+    "description": "تحليل روابط Baidu Netdisk بسرعة",
+    "tipsTitle": "نصائح الاستخدام",
+    "tips": ["نصيحة استخدام 1", "نصيحة استخدام 2", "نصيحة استخدام 3", "نصيحة استخدام 4", "نصيحة استخدام 5"],
+    "step1": {
+      "title": "أدخل الرابط",
+      "description": "أدخل رابط Baidu Netdisk"
+    },
+    "step2": {
+      "title": "تحقق من كلمة المرور",
+      "description": "أدخل رمز الاستخراج"
+    },
+    "step3": {
+      "title": "تحميل الملف",
+      "description": "انقر على زر التحميل لتحميل الملف"
+    },
+    "faqTitle": "الأسئلة الشائعة",
+    "faq": {
+      "1": {
+        "question": "لماذا فشل التحليل؟",
+        "answer": "يرجى التحقق من صحة الرابط ورمز الاستخراج"
+      },
+      "2": {
+        "question": "ماذا تفعل إذا فشل التحقق من كلمة المرور؟",
+        "answer": "قم بزيارة الحساب الرسمي للحصول على أحدث كلمة مرور"
+      },
+      "3": {
+        "question": "ماذا تفعل إذا فشل التحقق من التحليل؟",
+        "answer": "حاول مسح ذاكرة التخزين المؤقت للمتصفح أو تغيير المتصفح"
+      },
+      "4": {
+        "question": "ماذا تفعل إذا فشل الاتصال بـ RPC؟",
+        "answer": "يرجى النقر على كيفية الاستخدام واتباع البرنامج التعليمي للاتصال بـ RPC"
+      },
+      "5": {
+        "question": "مشاكل أخرى",
+        "answer": "اتصل بالمؤلف"
+      }
+    }
+  },
+  "Download": {
+    "title": "تحميل التحليل السحابي",
+    "selectDownloadMethod": "اختر طريقة التحميل",
+    "apiDownload": "تحميل API",
+    "rpcDownload": "تحميل RPC",
+    "rpcAddress": "عنوان RPC",
+    "rpcAddressPlaceholder": "الرجاء إدخال عنوان RPC",
+    "rpcAddressHint": "الرجاء إدخال عنوان RPC صالح",
+    "noFiles": "يرجى تحليل الرابط أولاً، جاري إعادة التوجيه...",
+    "testConnection": "اختبار الاتصال",
+    "connected": "متصل (Aria2 {version})",
+    "notConnected": "غير متصل",
+    "downloadDirectory": "دليل التحميل",
+    "userAgent": "وكيل المستخدم",
+    "startDownload": "بدء التحميل",
+    "testRPCConnectionSuccess": "نجح اختبار اتصال RPC",
+    "testRPCConnectionFailed": "فشل اختبار اتصال RPC",
+    "noDownloadableFiles": "لا توجد ملفات قابلة للتحميل",
+    "gettingDownloadLink": "جاري الحصول على رابط التحميل...",
+    "downloadSelectedItems": "تحميل العناصر المحددة ({count})",
+    "addedToRPCDownloadQueue": "تمت إضافته إلى قائمة انتظار تحميل RPC"
+  }
 }

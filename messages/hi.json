@@ -1,34 +1,140 @@
 {
   "HomePage": {
-    "title": "क्लाउड विश्लेषण",
-    "about": "क्लाउड विश्लेषण Baidu Netdisk आधारित एक विश्लेषण उपकरण है जो Baidu Netdisk लिंक्स का तेजी से विश्लेषण करता है और डाउनलोड कार्यक्षमता प्रदान करता है।",
+    "title": "FBD",
+    "about": "FBD एक Baidu Netdisk विश्लेषण उपकरण है जो Baidu Netdisk लिंक्स के तेजी से विश्लेषण का समर्थन करता है और डाउनलोड कार्यक्षमता प्रदान करता है।",
     "getStarted": "शुरू करें",
-    "description": "Baidu Netdisk लिंक्स का तेज विश्लेषण",
+    "description": "Baidu Netdisk लिंक्स का तेजी से विश्लेषण करें",
+    "howToUse": "ट्यूटोरियल",
+    "totalParsed": "विश्लेषित फ़ाइलें",
+    "totalParsedDesc": "फ़ाइलें सफलतापूर्वक विश्लेषित",
+    "activeUsers": "सक्रिय उपयोगकर्ता",
+    "activeUsersDesc": "उपयोगकर्ता वर्तमान में उपयोग कर रहे हैं",
+    "successRate": "सफलता दर",
+    "successRateDesc": "स्थिर और विश्वसनीय",
+    "featuresTitle": "मुख्य लाभ",
+    "totalDownloads": "कुल डाउनलोड",
+    "totalDownloadsDesc": "फ़ाइल डाउनलोड",
     "features": {
-      "fast": "अति तीव्र विश्लेषण",
+      "fast": "तेज विश्लेषण",
       "stable": "स्थिर और विश्वसनीय",
-      "simple": "उपयोग में आसान"
+      "simple": "उपयोग में आसान",
+      "fastDesc": "तेज विश्लेषण, कोई प्रतीक्षा नहीं, तत्काल डाउनलोड लिंक",
+      "stableDesc": "स्थिर और विश्वसनीय, 99.9% विश्लेषण सफलता दर",
+      "simpleDesc": "उपयोग में आसान, तीन चरणों में फ़ाइल डाउनलोड"
     },
     "actions": {
       "parse": "विश्लेषण शुरू करें",
       "download": "फ़ाइल डाउनलोड करें",
-      "login": "लॉग इन करें",
-      "register": "पंजीकरण करें"
+      "login": "लॉग इन",
+      "register": "रजिस्टर"
     },
     "placeholder": {
-      "linkInput": "Baidu Netdisk साझा लिंक दर्ज करें",
-      "codeInput": "निष्कर्षण कोड दर्ज करें (यदि उपलब्ध है)"
+      "linkInput": "कृपया Baidu Netdisk शेयर लिंक दर्ज करें",
+      "codeInput": "कृपया निष्कर्षण कोड दर्ज करें (यदि कोई हो)"
     }
   },
   "Menu": {
-    "home": "मुखपृष्ठ",
-    "about": "परिचय",
+    "home": "होम",
+    "about": "हमारे बारे में",
     "download": "डाउनलोड",
-    "contact": "संपर्क"
+    "contact": "पासवर्ड प्राप्त करें",
+    "howToUse": "कैसे उपयोग करें"
   },
   "Common": {
     "switchLanguage": "भाषा बदलें"
   },
   "hello-there": "",
-  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": ""
+  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": "",
+  "About": {
+    "title": "मेरे बारे में",
+    "description": "मैं Next.js सीख रहा एक शुरुआती हूं, और यह प्रोजेक्ट मेरा पहला Next.js प्रोजेक्ट है। मुझे आशा है कि आप इसे पसंद करेंगे।",
+    "skills": "मेरे कौशल",
+    "contact": "मुझसे संपर्क करें"
+  },
+  "parse": {
+    "step1": "लिंक दर्ज करें",
+    "step2": "पासवर्ड सत्यापित करें",
+    "step3": "फ़ाइल डाउनलोड करें",
+    "verifyPassword": "पासवर्ड सत्यापित करें",
+    "getPassword": "पासवर्ड प्राप्त करें",
+    "loading": "सत्यापित किया जा रहा है...",
+    "verify": "सत्यापित करें",
+    "download": "फ़ाइल डाउनलोड करें",
+    "success": "सत्यापन सफल! अब आप फ़ाइल डाउनलोड कर सकते हैं।",
+    "inputUrl": "Baidu Netdisk लिंक",
+    "inputUrlPlaceholder": "कृपया Baidu Netdisk लिंक दर्ज करें",
+    "inputUrlHint": "कृपया एक वैध Baidu Netdisk लिंक दर्ज करें",
+    "inputPassword": "निष्कर्षण कोड",
+    "inputPasswordPlaceholder": "कृपया निष्कर्षण कोड दर्ज करें",
+    "inputPasswordHint": "कृपया एक वैध निष्कर्षण कोड दर्ज करें",
+    "parse": "विश्लेषण करें",
+    "pasteSuccess": "निष्कर्षण कोड मिला, स्वचालित रूप से भरा गया",
+    "parseError": "विश्लेषण विफल, कृपया लिंक और निष्कर्षण कोड जांचें",
+    "title": "क्लाउड विश्लेषण",
+    "reset": "दूसरी फ़ाइल का विश्लेषण करें"
+  },
+  "HowToUse": {
+    "title": "कैसे उपयोग करें",
+    "videoTitle": "वीडियो ट्यूटोरियल",
+    "description": "Baidu Netdisk लिंक्स का तेजी से विश्लेषण करें",
+    "tipsTitle": "उपयोग युक्तियाँ",
+    "tips": ["उपयोग युक्ति 1", "उपयोग युक्ति 2", "उपयोग युक्ति 3", "उपयोग युक्ति 4", "उपयोग युक्ति 5"],
+    "step1": {
+      "title": "लिंक दर्ज करें",
+      "description": "Baidu Netdisk लिंक दर्ज करें"
+    },
+    "step2": {
+      "title": "पासवर्ड सत्यापित करें",
+      "description": "निष्कर्षण कोड दर्ज करें"
+    },
+    "step3": {
+      "title": "फ़ाइल डाउनलोड करें",
+      "description": "फ़ाइल डाउनलोड करने के लिए डाउनलोड बटन पर क्लिक करें"
+    },
+    "faqTitle": "सामान्य प्रश्न",
+    "faq": {
+      "1": {
+        "question": "विश्लेषण क्यों विफल हुआ?",
+        "answer": "कृपया जांचें कि लिंक और निष्कर्षण कोड सही हैं"
+      },
+      "2": {
+        "question": "पासवर्ड सत्यापन विफल होने पर क्या करें?",
+        "answer": "नवीनतम पासवर्ड प्राप्त करने के लिए आधिकारिक खाते पर जाएं"
+      },
+      "3": {
+        "question": "विश्लेषण सत्यापन विफल होने पर क्या करें?",
+        "answer": "ब्राउज़र कैश साफ़ करें या ब्राउज़र बदलें"
+      },
+      "4": {
+        "question": "RPC कनेक्शन विफल होने पर क्या करें?",
+        "answer": "कृपया कैसे उपयोग करें पर क्लिक करें और RPC कनेक्ट करने के लिए ट्यूटोरियल का पालन करें"
+      },
+      "5": {
+        "question": "अन्य समस्याएं",
+        "answer": "लेखक से संपर्क करें"
+      }
+    }
+  },
+  "Download": {
+    "title": "क्लाउड विश्लेषण डाउनलोड",
+    "selectDownloadMethod": "डाउनलोड विधि चुनें",
+    "apiDownload": "API डाउनलोड",
+    "rpcDownload": "RPC डाउनलोड",
+    "rpcAddress": "RPC पता",
+    "rpcAddressPlaceholder": "कृपया RPC पता दर्ज करें",
+    "rpcAddressHint": "कृपया एक वैध RPC पता दर्ज करें",
+    "noFiles": "कृपया पहले लिंक का विश्लेषण करें, पुनर्निर्देशित किया जा रहा है...",
+    "testConnection": "कनेक्शन परीक्षण करें",
+    "connected": "कनेक्टेड (Aria2 {version})",
+    "notConnected": "कनेक्ट नहीं",
+    "downloadDirectory": "डाउनलोड निर्देशिका",
+    "userAgent": "यूजर एजेंट",
+    "startDownload": "डाउनलोड शुरू करें",
+    "testRPCConnectionSuccess": "RPC कनेक्शन परीक्षण सफल",
+    "testRPCConnectionFailed": "RPC कनेक्शन परीक्षण विफल",
+    "noDownloadableFiles": "डाउनलोड करने योग्य कोई फ़ाइल नहीं",
+    "gettingDownloadLink": "डाउनलोड लिंक प्राप्त किया जा रहा है...",
+    "downloadSelectedItems": "चयनित आइटम डाउनलोड करें ({count})",
+    "addedToRPCDownloadQueue": "RPC डाउनलोड कतार में जोड़ा गया"
+  }
 }

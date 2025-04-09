@@ -4,7 +4,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { useState } from 'react';
 import * as Flags from 'country-flag-icons/react/3x2';
-
+import useCommonStore from '@/store/common';
 // Language options with their metadata
 const languages = [
   { code: 'en', name: 'English', flag: 'GB' },
@@ -52,6 +52,7 @@ export default function LanguageSwitcher() {
   const t = useTranslations('Common');
 
   const handleLanguageChange = (languageCode: string) => {
+    useCommonStore.getState().setLocale(languageCode);
     router.replace(pathname, { locale: languageCode });
     setIsOpen(false);
   };

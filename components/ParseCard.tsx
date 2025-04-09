@@ -43,7 +43,7 @@ const ParseCard = ({ onParseSuccess }: ParseCardProps) => {
         isroot: true,
         dir: '/',
       });
-      const { list, shareid, uk, seckey } = res.data;
+      const { list, shareid, uk, seckey } = res;
       setNode(list);
       setShareInfo({
         share_id: shareid,
@@ -70,20 +70,20 @@ const ParseCard = ({ onParseSuccess }: ParseCardProps) => {
           <div className="mb-2">{t('inputUrl')}</div>
           <input
             type="text"
-            placeholder="请输入百度网盘链接"
+            placeholder={t('inputUrlPlaceholder')}
             className="input validator"
             pattern="^https:\/\/pan\.baidu\.com.*"
             required
             value={url}
             onChange={(e) => setUrl(e.target.value)}
           />
-          <div className="validator-hint">请输入正确的百度网盘链接</div>
+          <div className="validator-hint">{t('inputUrlHint')}</div>
         </div>
         <div className="form-control mt-4">
           <div className="mb-2">{t('inputPassword')}</div>
           <input
             type="text"
-            placeholder="请输入提取码"
+            placeholder={t('inputPasswordPlaceholder')}
             className="input validator"
             value={password}
             pattern="[a-zA-Z0-9]{4}"

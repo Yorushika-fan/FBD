@@ -1,38 +1,11 @@
+import { NextRequest } from 'next/server';
+import { apiHandler } from '@/middlewares/apiHandler';
+import { ApiError } from '@/utils/errors';
+import { ErrorCode } from '@/enums/errorCodes';
+import { NextResponse } from 'next/server';
 import axios from 'axios';
-import { Redis } from '@upstash/redis';
-import { TransferParams, GetFileListParams } from '@/types/baidu';
-
-interface ApiResponse<T> {
-  code: number;
-  message: string;
-  data?: T;
-}
-
-interface TransferResponse {
-  errno: number;
-  extra: {
-    list: Array<{
-      to: string;
-      from_fs_id: string;
-    }>;
-  };
-  task_id?: string;
-}
-
-const Success = <T>(data: T, code = 0): ApiResponse<T> => {
-  return {
-    code,
-    message: 'success',
-    data,
-  };
-};
-
-const Error = (message: string, code = 9999) => {
-  return {
-    code,
-    message,
-  };
-};
+import { createSuccessResponse } from '@/utils/response';
+import { TransferParams, TransferResponse } from '@/types/baidu';
 
 const realLinkHeader = {
   'User-Agent': 'netdisk;FBD;',
@@ -51,49 +24,17 @@ const realLinkHeader = {
   'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
 };
 
-// 获取文件列表
-const getFileList = async (params: GetFileListParams) => {
-  const Cookie = process.env.NEXT_PUBLIC_BAIDU_COOKIE;
-  if (!Cookie) {
-    return Error('BAIDU_COOKIE is not set');
-  }
-  //解析文件
-  const { surl, password, isroot, dir } = params;
-  console.log(surl, password, isroot, dir, 'params');
-  const formData = new URLSearchParams({
-    shorturl: surl,
-    dir,
-    root: isroot ? '1' : '0',
-    pwd: password,
-    page: '1',
-    num: '1000',
-    order: 'time',
-  });
-  const response = await axios.post('https://pan.baidu.com/share/wxlist', formData, {
-    params: {
-      channel: 'weixin',
-      version: '2.2.2',
-      clienttype: '25',
-      web: '1',
-    },
+const checkTaskStatus = async (taskId: string, bdstoken: string, Cookie: string) => {
+  const taskUrl = `https://pan.baidu.com/share/taskquery?taskid=${taskId}&channel=chunlei&web=1&app_id=250528&bdstoken=${bdstoken}&logid=MDVDMTBCQUI2MTg1NjQwMEREMURENTM2NEQwRUM2RUQ6Rkc9MQ==&clienttype=0&dp-logid=33402200798524440066`;
+  const taskResponse = await axios.get(taskUrl, {
     headers: {
-      UserAgent: 'netdisk',
+      ...realLinkHeader,
       Cookie,
-      Referer: 'https://pan.baidu.com/disk/home',
     },
   });
-  console.log(response.data, 'response.data');
-  const { errno, error_msg = '请求错误', data } = response.data;
-  const { list, shareid, uk, seckey } = data;
-  console.log(list, 'list');
-  if (errno !== 0) {
-    return Error(error_msg);
-  }
-
-  return Success({ list, shareid, uk, seckey });
+  return taskResponse.data;
 };
 
-// 传输文件
 const transferFile = async (
   params: TransferParams,
   Cookie: string,
@@ -161,19 +102,30 @@ const transferFile = async (
   }
 };
 
-// 获取下载链接
-const getDownloadLink = async (params: TransferParams) => {
+async function handler(request: NextRequest) {
+  const params = await request.json();
+
+  if (!params) {
+    throw new ApiError(ErrorCode.BAD_REQUEST);
+  }
+
   const Cookie = process.env.NEXT_PUBLIC_BAIDU_COOKIE;
+
   if (!Cookie) {
-    return Error('BAIDU_COOKIE is not set');
+    throw new ApiError(ErrorCode.BAIDU_COOKIE_NOT_FOUND);
   }
-  const res = await transferFile(params, Cookie);
-  const { errno, list } = res;
+
+  const fileInfo = await transferFile(params, Cookie);
+  const { errno, list } = fileInfo;
+
   if (errno !== 0) {
-    return Error('转存失败');
+    throw new ApiError(ErrorCode.TRANSFER_FILE_FAILED);
   }
-  console.log(list, 'list1111');
-  const parsePath = process.env.BAIDU_PARSE_DIR || '';
+
+  const parsePath = process.env.BAIDU_PARSE_DIR;
+  if (!parsePath) {
+    throw new ApiError(ErrorCode.BAIDU_PARSE_DIR_NOT_FOUND);
+  }
 
   const promises = list.map(async (item: { to: string; from_fs_id: string }) => {
     const { to, from_fs_id } = item;
@@ -188,7 +140,6 @@ const getDownloadLink = async (params: TransferParams) => {
     });
 
     const dlink = response.data.urls[0].url;
-    console.log(response.data, 'response.data');
     return {
       fileName: to.replace(parsePath, ''),
       from: from_fs_id,
@@ -197,30 +148,7 @@ const getDownloadLink = async (params: TransferParams) => {
   });
 
   const results = await Promise.all(promises);
+  return NextResponse.json(createSuccessResponse(results, '获取下载链接成功'), { status: 200 });
+}
 
-  return Success(results);
-};
-
-// 检查任务状态
-const checkTaskStatus = async (taskId: string, bdstoken: string, Cookie: string) => {
-  const taskUrl = `https://pan.baidu.com/share/taskquery?taskid=${taskId}&channel=chunlei&web=1&app_id=250528&bdstoken=${bdstoken}&logid=MDVDMTBCQUI2MTg1NjQwMEREMURENTM2NEQwRUM2RUQ6Rkc9MQ==&clienttype=0&dp-logid=33402200798524440066`;
-  const taskResponse = await axios.get(taskUrl, {
-    headers: {
-      ...realLinkHeader,
-      Cookie,
-    },
-  });
-  return taskResponse.data;
-};
-
-//获取 token
-const verifyCode = async (params: string) => {
-  const redis = Redis.fromEnv();
-  const token = await redis.get(`baidu_token_${params}`);
-  if (token) {
-    return Success(true);
-  }
-  return Error('验证码错误或已过期');
-};
-
-export { Success, Error, getFileList, transferFile, getDownloadLink, checkTaskStatus, verifyCode };
+export const POST = apiHandler(handler);

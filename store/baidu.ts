@@ -4,7 +4,7 @@ import { BaiduFile, FileTreeProps, ShareInfo } from '@/types/baidu';
 
 const useBaiduStore = create<FileTreeProps>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       node: [],
       isInitialized: false,
       surl: '',
@@ -88,6 +88,22 @@ const useBaiduStore = create<FileTreeProps>()(
       // 设置文件列表
       setNode: (node: BaiduFile[]) => {
         set({ node });
+      },
+      // 清空存储的所有内容
+      clearStore: () => {
+        console.log('清空存储');
+        set({
+          node: [],
+          surl: '',
+          password: '',
+          shareInfo: {
+            share_id: '',
+            uk: '',
+            seckey: '',
+          },
+        });
+        // 清除 localStorage 中的数据
+        localStorage.removeItem('baidu-storage');
       },
     }),
     {

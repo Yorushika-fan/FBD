@@ -1,49 +1,49 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import ParseCard from '@/components/ParseCard';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { useBaiduStore } from '@/store/baidu';
-
+import baiduClient from '@/lib/baidu/baiduClient';
+import useCommonStore from '@/store/common';
+import GlobalLoading from '@/components/GlobalLoading';
 const Download = () => {
-  const [currentStep, setCurrentStep] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return Number(localStorage.getItem('parseStep')) || 1;
-    }
-    return 1;
-  });
-  const [password, setPassword] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
   const t = useTranslations('parse');
+  const { getToken } = baiduClient;
+  const { updateCurrentStep, isInitialized, currentStep, setVerifyCode, verifyCode, setUuid } = useCommonStore();
+  const { setSurl, setPassword } = useBaiduStore();
 
-  useEffect(() => {
-    localStorage.setItem('parseStep', currentStep.toString());
-  }, [currentStep]);
+  if (!isInitialized) {
+    return <GlobalLoading />;
+  }
 
   const handleParseSuccess = (surl: string, password: string) => {
-    setCurrentStep(2);
-    useBaiduStore.getState().setSurl(surl);
-    useBaiduStore.getState().setPassword(password);
+    updateCurrentStep(2);
+    setSurl(surl);
+    setPassword(password);
   };
 
   const handlePasswordSubmit = async () => {
-    if (!password || password.length !== 6) {
+    if (!verifyCode || verifyCode.length !== 6) {
       return;
     }
-    setIsLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setCurrentStep(3);
-    setIsLoading(false);
+
+    try {
+      const { uuid } = await getToken(verifyCode);
+      setUuid(uuid);
+      updateCurrentStep(3);
+    } catch (error) {
+      updateCurrentStep(2);
+      console.error(error);
+    }
   };
 
   const handleReset = () => {
-    setCurrentStep(1);
+    updateCurrentStep(1);
+    setVerifyCode('');
+    setSurl('');
     setPassword('');
-    useBaiduStore.getState().setSurl('');
-    useBaiduStore.getState().setPassword('');
-    localStorage.removeItem('parseStep');
   };
 
   return (
@@ -78,16 +78,16 @@ const Download = () => {
                     type="text"
                     className="absolute z-10 h-full w-full opacity-0"
                     maxLength={6}
-                    value={password}
+                    value={verifyCode}
                     onChange={(e) => {
                       const value = e.target.value.replace(/[^0-9]/g, '');
                       if (value.length <= 6) {
-                        setPassword(value);
+                        setVerifyCode(value);
                       }
                     }}
                     onKeyDown={(e) => {
-                      if (e.key === 'Backspace' && password.length > 0) {
-                        setPassword(password.slice(0, -1));
+                      if (e.key === 'Backspace' && verifyCode.length > 0) {
+                        setVerifyCode(verifyCode.slice(0, -1));
                       }
                     }}
                     autoFocus
@@ -98,10 +98,10 @@ const Download = () => {
                         key={index}
                         className={cn(
                           'input input-bordered flex h-12 w-full items-center justify-center text-center text-lg font-medium',
-                          password.length === index && 'input-primary',
+                          verifyCode.length === index && 'input-primary',
                         )}
                       >
-                        {password[index] || ''}
+                        {verifyCode[index] || ''}
                       </div>
                     ))}
                   </div>
@@ -109,11 +109,11 @@ const Download = () => {
               </div>
               <div className="card-actions mt-6 justify-end">
                 <button
-                  className={cn('btn btn-primary', isLoading && 'loading')}
+                  className={cn('btn btn-primary')}
                   onClick={handlePasswordSubmit}
-                  disabled={isLoading || password.length !== 6}
+                  disabled={verifyCode.length !== 6}
                 >
-                  {isLoading ? t('loading') : t('verify')}
+                  {t('verify')}
                 </button>
               </div>
             </>

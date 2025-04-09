@@ -16,6 +16,13 @@ export interface BaiduFile {
   children?: BaiduFile[];
 }
 
+export interface GetFileListResponse {
+  list: BaiduFile[];
+  shareid: string;
+  uk: string;
+  seckey: string;
+}
+
 // 分享信息接口
 export interface ShareInfo {
   share_id: string;
@@ -33,6 +40,7 @@ export interface FileTreeProps {
   onFileClick?: (file: BaiduFile) => void;
   selectedFiles?: Set<string>;
   setNode: (node: BaiduFile[]) => void;
+  clearStore: () => void;
   setShareInfo: (shareInfo: ShareInfo) => void;
   setNodeChildren: (path: string, data: BaiduFile[]) => Promise<void>;
   onSelectionChange?: (selectedFiles: Set<string>) => void;
@@ -95,10 +103,13 @@ export interface SvipInfo {
   state: number;
 }
 
-export enum BaiduApiType {
-  GetFileList = 'getFileList',
-  TransferFile = 'transferFile',
-  GetDownloadLink = 'getDownloadLink',
+export interface TransferResponse {
+  errno: number;
+  extra: {
+    list: Array<{
+      to: string;
+      from_fs_id: string;
+    }>;
+  };
+  task_id?: string;
 }
-
-export const BaiduApiUrl = '/api/baidu';

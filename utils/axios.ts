@@ -1,8 +1,13 @@
 import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
-
+import { toast } from 'sonner';
+import { useLoadingStore } from '@/store/loading';
+import useCommonStore from '@/store/common';
+import { ErrorCode } from '@/enums/errorCodes';
+import { ApiError } from '@/utils/errors';
+import { redirect } from 'next/navigation';
 // 响应数据的基础接口
-export interface BaseResponse<T = any> {
-  code: number;
+export interface BaseResponse<T = unknown> {
+  code: ErrorCode;
   message: string;
   data: T;
 }
@@ -13,10 +18,15 @@ interface CustomAxiosRequestConfig extends InternalAxiosRequestConfig {
   retryDelay?: number;
 }
 
+const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
+if (!baseURL) {
+  toast.error('NEXT_PUBLIC_API_BASE_URL is not defined');
+  throw new Error('NEXT_PUBLIC_API_BASE_URL is not defined');
+}
 // 创建请求配置
 const config = {
   // 基础URL，可以通过环境变量配置
-  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000',
+  baseURL,
   // 超时时间
   timeout: 300000,
   // 请求重试次数
@@ -31,16 +41,16 @@ const instance: AxiosInstance = axios.create(config);
 // 请求拦截器
 instance.interceptors.request.use(
   (config: CustomAxiosRequestConfig) => {
-    // 在发送请求之前做些什么
-    // 例如：添加 token
-    // const token = localStorage.getItem('token');
-    // if (token) {
-    //   config.headers.Authorization = `Bearer ${token}`;
-    // }
+    useLoadingStore.getState().setLoading(true);
+    const uuid = useCommonStore.getState().uuid;
+    if (uuid) {
+      config.headers['uuid'] = uuid;
+    }
     return config;
   },
   (error: AxiosError) => {
     // 对请求错误做些什么
+    useLoadingStore.getState().setLoading(false);
     return Promise.reject(error);
   },
 );
@@ -48,76 +58,90 @@ instance.interceptors.request.use(
 // 响应拦截器
 instance.interceptors.response.use(
   (response: AxiosResponse) => {
-    // 2xx 范围内的状态码都会触发该函数
+    useLoadingStore.getState().setLoading(false);
     const { data } = response;
+    const { code, message, data: responseData } = data;
 
-    // Check if this is an error response from your API
-    if (data.code !== 0) {
-      return Promise.reject(new Error(data.message));
+    switch (code) {
+      case 0:
+        toast.success(message);
+        return responseData;
+      case ErrorCode.VERIFY_CODE_ERROR:
+        toast.error(message);
+        return Promise.reject(data);
+      case ErrorCode.BAD_REQUEST:
+        toast.error(message);
+        return Promise.reject(data);
+      case ErrorCode.UNAUTHORIZED:
+        toast.error(message);
+        useCommonStore.getState().reset();
+        setTimeout(() => {
+          redirect('/parse');
+        }, 3000);
+        return Promise.reject(data);
+      case ErrorCode.FORBIDDEN:
+        return Promise.reject(data);
     }
-
-    return data;
   },
   async (error: AxiosError) => {
-    const { config, response } = error;
-    const customConfig = config as CustomAxiosRequestConfig;
+    useLoadingStore.getState().setLoading(false);
 
-    // 处理请求重试
-    if (customConfig && customConfig.retry) {
-      const backoff = new Promise((resolve) => {
-        setTimeout(() => {
-          resolve(null);
-        }, customConfig.retryDelay || 1000);
-      });
+    // 处理 HTTP 错误
+    if (error.response) {
+      const status = error.response.status;
+      let errorCode: ErrorCode;
 
-      customConfig.retry -= 1;
-      await backoff;
-      return instance(customConfig);
-    }
-
-    // 处理特定的错误状态码
-    if (response) {
-      switch (response.status) {
+      switch (status) {
+        case 400:
+          errorCode = ErrorCode.BAD_REQUEST;
+          break;
         case 401:
-          // 未授权，可以在这里处理登出逻辑
+          errorCode = ErrorCode.UNAUTHORIZED;
           break;
         case 403:
-          // 禁止访问
+          errorCode = ErrorCode.FORBIDDEN;
           break;
         case 404:
-          // 未找到
+          errorCode = ErrorCode.NOT_FOUND;
           break;
-        case 500:
-          // 服务器错误
+        case 405:
+          errorCode = ErrorCode.METHOD_NOT_ALLOWED;
           break;
         default:
-          break;
+          errorCode = ErrorCode.INTERNAL_SERVER_ERROR;
       }
+
+      const apiError = new ApiError(errorCode);
+      toast.error(apiError.message);
+      return Promise.reject(apiError);
     }
 
-    return Promise.reject(error);
+    // 处理网络错误
+    const apiError = new ApiError(ErrorCode.INTERNAL_SERVER_ERROR);
+    toast.error(apiError.message);
+    return Promise.reject(apiError);
   },
 );
 
 // 封装请求方法
 export const request = {
-  get<T = any>(url: string, config?: AxiosRequestConfig): Promise<T> {
+  get<T = unknown>(url: string, config?: AxiosRequestConfig): Promise<T> {
     return instance.get(url, config);
   },
 
-  post<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<BaseResponse<T>> {
+  post<T = unknown>(url: string, data?: unknown, config?: AxiosRequestConfig): Promise<T> {
     return instance.post(url, data, config);
   },
 
-  put<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<BaseResponse<T>> {
+  put<T = unknown>(url: string, data?: unknown, config?: AxiosRequestConfig): Promise<T> {
     return instance.put(url, data, config);
   },
 
-  delete<T = any>(url: string, config?: AxiosRequestConfig): Promise<BaseResponse<T>> {
+  delete<T = unknown>(url: string, config?: AxiosRequestConfig): Promise<T> {
     return instance.delete(url, config);
   },
 
-  patch<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<BaseResponse<T>> {
+  patch<T = unknown>(url: string, data?: unknown, config?: AxiosRequestConfig): Promise<T> {
     return instance.patch(url, data, config);
   },
 };

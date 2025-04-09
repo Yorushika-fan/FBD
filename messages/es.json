@@ -1,13 +1,26 @@
 {
   "HomePage": {
-    "title": "Análisis en la Nube",
-    "about": "Análisis en la Nube es una herramienta de análisis basada en Baidu Netdisk que permite analizar rápidamente enlaces de Baidu Netdisk y proporciona funcionalidad de descarga.",
+    "title": "FBD",
+    "about": "FBD es una herramienta de análisis de Baidu Netdisk que admite el análisis rápido de enlaces de Baidu Netdisk y proporciona funcionalidad de descarga.",
     "getStarted": "Comenzar",
-    "description": "Análisis rápido de enlaces de Baidu Netdisk",
+    "description": "Analizar enlaces de Baidu Netdisk rápidamente",
+    "howToUse": "Tutorial",
+    "totalParsed": "Archivos analizados",
+    "totalParsedDesc": "archivos analizados exitosamente",
+    "activeUsers": "Usuarios activos",
+    "activeUsersDesc": "usuarios usando actualmente",
+    "successRate": "Tasa de éxito",
+    "successRateDesc": "Estable y confiable",
+    "featuresTitle": "Ventajas principales",
+    "totalDownloads": "Descargas totales",
+    "totalDownloadsDesc": "descargas de archivos",
     "features": {
-      "fast": "Análisis ultrarrápido",
+      "fast": "Análisis rápido",
       "stable": "Estable y confiable",
-      "simple": "Fácil de usar"
+      "simple": "Fácil de usar",
+      "fastDesc": "Análisis rápido, sin espera, enlaces de descarga instantáneos",
+      "stableDesc": "Estable y confiable, tasa de éxito de análisis del 99.9%",
+      "simpleDesc": "Fácil de usar, descarga de archivos en tres pasos"
     },
     "actions": {
       "parse": "Comenzar análisis",
@@ -16,19 +29,112 @@
       "register": "Registrarse"
     },
     "placeholder": {
-      "linkInput": "Ingrese el enlace compartido de Baidu Netdisk",
-      "codeInput": "Ingrese el código de extracción (si lo hay)"
+      "linkInput": "Por favor ingrese el enlace de compartir de Baidu Netdisk",
+      "codeInput": "Por favor ingrese el código de extracción (si existe)"
     }
   },
   "Menu": {
     "home": "Inicio",
     "about": "Acerca de",
     "download": "Descargar",
-    "contact": "Contacto"
+    "contact": "Obtener contraseña",
+    "howToUse": "Cómo usar"
   },
   "Common": {
     "switchLanguage": "Cambiar idioma"
   },
   "hello-there": "",
-  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": ""
+  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": "",
+  "About": {
+    "title": "Acerca de mí",
+    "description": "Soy un principiante aprendiendo Next.js, y este proyecto es mi primer proyecto en Next.js. Espero que te guste.",
+    "skills": "Mis habilidades",
+    "contact": "Contáctame"
+  },
+  "parse": {
+    "step1": "Ingresar enlace",
+    "step2": "Verificar contraseña",
+    "step3": "Descargar archivo",
+    "verifyPassword": "Verificar contraseña",
+    "getPassword": "Obtener contraseña",
+    "loading": "Verificando...",
+    "verify": "Verificar",
+    "download": "Descargar archivo",
+    "success": "¡Verificación exitosa! Ahora puedes descargar el archivo.",
+    "inputUrl": "Enlace de Baidu Netdisk",
+    "inputUrlPlaceholder": "Por favor ingrese el enlace de Baidu Netdisk",
+    "inputUrlHint": "Por favor ingrese un enlace válido de Baidu Netdisk",
+    "inputPassword": "Código de extracción",
+    "inputPasswordPlaceholder": "Por favor ingrese el código de extracción",
+    "inputPasswordHint": "Por favor ingrese un código de extracción válido",
+    "parse": "Analizar",
+    "pasteSuccess": "Código de extracción encontrado, rellenado automáticamente",
+    "parseError": "Análisis fallido, por favor verifique el enlace y el código de extracción",
+    "title": "Análisis en la nube",
+    "reset": "Analizar otro archivo"
+  },
+  "HowToUse": {
+    "title": "Cómo usar",
+    "videoTitle": "Video tutorial",
+    "description": "Analizar enlaces de Baidu Netdisk rápidamente",
+    "tipsTitle": "Consejos de uso",
+    "tips": ["Consejo de uso 1", "Consejo de uso 2", "Consejo de uso 3", "Consejo de uso 4", "Consejo de uso 5"],
+    "step1": {
+      "title": "Ingresar enlace",
+      "description": "Ingrese el enlace de Baidu Netdisk"
+    },
+    "step2": {
+      "title": "Verificar contraseña",
+      "description": "Ingrese el código de extracción"
+    },
+    "step3": {
+      "title": "Descargar archivo",
+      "description": "Haga clic en el botón de descarga para descargar el archivo"
+    },
+    "faqTitle": "Preguntas frecuentes",
+    "faq": {
+      "1": {
+        "question": "¿Por qué falló el análisis?",
+        "answer": "Por favor verifique si el enlace y el código de extracción son correctos"
+      },
+      "2": {
+        "question": "¿Qué hacer si falla la verificación de contraseña?",
+        "answer": "Visite la cuenta oficial para obtener la contraseña más reciente"
+      },
+      "3": {
+        "question": "¿Qué hacer si falla la verificación del análisis?",
+        "answer": "Intente borrar el caché del navegador o cambiar de navegador"
+      },
+      "4": {
+        "question": "¿Qué hacer si falla la conexión RPC?",
+        "answer": "Por favor haga clic en Cómo usar y siga el tutorial para conectar RPC"
+      },
+      "5": {
+        "question": "Otros problemas",
+        "answer": "Contacte al autor"
+      }
+    }
+  },
+  "Download": {
+    "title": "Descarga de análisis en la nube",
+    "selectDownloadMethod": "Seleccionar método de descarga",
+    "apiDownload": "Descarga API",
+    "rpcDownload": "Descarga RPC",
+    "rpcAddress": "Dirección RPC",
+    "rpcAddressPlaceholder": "Por favor ingrese la dirección RPC",
+    "rpcAddressHint": "Por favor ingrese una dirección RPC válida",
+    "noFiles": "Por favor analice el enlace primero, redirigiendo...",
+    "testConnection": "Probar conexión",
+    "connected": "Conectado (Aria2 {version})",
+    "notConnected": "No conectado",
+    "downloadDirectory": "Directorio de descarga",
+    "userAgent": "User-Agent",
+    "startDownload": "Comenzar descarga",
+    "testRPCConnectionSuccess": "Prueba de conexión RPC exitosa",
+    "testRPCConnectionFailed": "Prueba de conexión RPC fallida",
+    "noDownloadableFiles": "No hay archivos para descargar",
+    "gettingDownloadLink": "Obteniendo enlace de descarga...",
+    "downloadSelectedItems": "Descargar elementos seleccionados ({count})",
+    "addedToRPCDownloadQueue": "Agregado a la cola de descarga RPC"
+  }
 }

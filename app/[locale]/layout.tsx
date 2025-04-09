@@ -8,6 +8,7 @@ import { getMessages } from 'next-intl/server';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Toaster } from 'sonner';
+import GlobalLoading from '@/components/GlobalLoading';
 export default async function LocaleLayout({
   children,
   params,
@@ -18,6 +19,7 @@ export default async function LocaleLayout({
   // Ensure that the incoming `locale` is valid
   const messages = await getMessages();
   const { locale } = await params;
+
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
@@ -26,6 +28,7 @@ export default async function LocaleLayout({
     <html lang={locale} data-theme="cupcake">
       <body className="flex min-h-screen flex-col">
         <NextIntlClientProvider messages={messages}>
+          <GlobalLoading />
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />

@@ -1,32 +1,138 @@
 {
   "Common": {
-    "switchLanguage": "Switch language"
+    "switchLanguage": "Switch Language"
   },
   "Menu": {
     "home": "Home",
     "about": "About",
     "download": "Download",
-    "contact": "Contact"
+    "contact": "Get Password",
+    "howToUse": "How to Use"
+  },
+  "About": {
+    "title": "About Me",
+    "description": "I am a beginner learning Next.js, and this project is my first Next.js project. I hope you like it.",
+    "skills": "My Skills",
+    "contact": "Contact Me"
+  },
+  "parse": {
+    "step1": "Enter Link",
+    "step2": "Verify Password",
+    "step3": "Download File",
+    "verifyPassword": "Verify Password",
+    "getPassword": "Get Password",
+    "loading": "Verifying...",
+    "verify": "Verify",
+    "download": "Download File",
+    "success": "Verification successful! You can now download the file.",
+    "inputUrl": "Baidu Netdisk Link",
+    "inputUrlPlaceholder": "Please enter Baidu Netdisk link",
+    "inputUrlHint": "Please enter a valid Baidu Netdisk link",
+    "inputPassword": "Extraction Code",
+    "inputPasswordPlaceholder": "Please enter extraction code",
+    "inputPasswordHint": "Please enter a valid extraction code",
+    "parse": "Parse",
+    "pasteSuccess": "Extraction code found, auto-filled",
+    "parseError": "Parsing failed, please check the link and extraction code",
+    "title": "Cloud Parse",
+    "reset": "Parse Another File"
+  },
+  "HowToUse": {
+    "title": "How to Use",
+    "videoTitle": "Video Tutorial",
+    "description": "Quickly parse Baidu Netdisk links",
+    "tipsTitle": "Usage Tips",
+    "tips": ["Usage Tip 1", "Usage Tip 2", "Usage Tip 3", "Usage Tip 4", "Usage Tip 5"],
+    "step1": {
+      "title": "Enter Link",
+      "description": "Enter Baidu Netdisk link"
+    },
+    "step2": {
+      "title": "Verify Password",
+      "description": "Enter extraction code"
+    },
+    "step3": {
+      "title": "Download File",
+      "description": "Click the download button to download the file"
+    },
+    "faqTitle": "FAQ",
+    "faq": {
+      "1": {
+        "question": "Why did parsing fail?",
+        "answer": "Please check if the link and extraction code are correct"
+      },
+      "2": {
+        "question": "What to do if password verification fails?",
+        "answer": "Visit the official account to get the latest password"
+      },
+      "3": {
+        "question": "What to do if parsing verification fails?",
+        "answer": "Try clearing browser cache or changing browser"
+      },
+      "4": {
+        "question": "What to do if RPC connection fails?",
+        "answer": "Please click How to Use and follow the tutorial to connect RPC"
+      },
+      "5": {
+        "question": "Other Issues",
+        "answer": "Contact the author"
+      }
+    }
+  },
+  "Download": {
+    "title": "Cloud Parse Download",
+    "selectDownloadMethod": "Select Download Method",
+    "apiDownload": "API Download",
+    "rpcDownload": "RPC Download",
+    "rpcAddress": "RPC Address",
+    "rpcAddressPlaceholder": "Please enter RPC address",
+    "rpcAddressHint": "Please enter a valid RPC address",
+    "noFiles": "Please parse the link first, redirecting...",
+    "testConnection": "Test Connection",
+    "connected": "Connected (Aria2 {version})",
+    "notConnected": "Not Connected",
+    "downloadDirectory": "Download Directory",
+    "userAgent": "User-Agent",
+    "startDownload": "Start Download",
+    "testRPCConnectionSuccess": "RPC connection test successful",
+    "testRPCConnectionFailed": "RPC connection test failed",
+    "noDownloadableFiles": "No downloadable files",
+    "gettingDownloadLink": "Getting download link...",
+    "downloadSelectedItems": "Download selected items ({count})",
+    "addedToRPCDownloadQueue": "Added to RPC download queue"
   },
   "HomePage": {
-    "title": "DuPan Parser",
-    "about": "DuPan Parser is a tool for parsing Baidu network disk links, providing fast and stable analysis services.",
+    "title": "FBD",
+    "about": "FBD is a Baidu Netdisk parsing tool that supports quick parsing of Baidu Netdisk links and provides download functionality.",
     "getStarted": "Get Started",
-    "actions": {
-      "download": "Download the file",
-      "login": "Log in",
-      "parse": "Start parsing",
-      "register": "register"
-    },
-    "description": "Quickly analyze Baidu network disk link",
+    "description": "Quickly parse Baidu Netdisk links",
+    "howToUse": "Tutorial",
+    "totalParsed": "Parsed Files",
+    "totalParsedDesc": "files successfully parsed",
+    "activeUsers": "Active Users",
+    "activeUsersDesc": "users currently using",
+    "successRate": "Success Rate",
+    "successRateDesc": "Stable and Reliable",
+    "featuresTitle": "Core Advantages",
+    "totalDownloads": "Total Downloads",
+    "totalDownloadsDesc": "file downloads",
     "features": {
-      "fast": "Speedy analysis",
-      "simple": "Simple and easy to use",
-      "stable": "Stable and reliable"
+      "fast": "Fast Parsing",
+      "stable": "Stable and Reliable",
+      "simple": "Simple to Use",
+      "fastDesc": "Fast parsing, no waiting, instant download links",
+      "stableDesc": "Stable and reliable, 99.9% parsing success rate",
+      "simpleDesc": "Simple to use, complete file download in three steps"
+    },
+    "actions": {
+      "parse": "Start Parsing",
+      "download": "Download File",
+      "login": "Login",
+      "register": "Register"
     },
     "placeholder": {
-      "codeInput": "Please enter the extraction code (if any)",
-      "linkInput": "Please enter the Baidu Netdisk sharing link"
+      "linkInput": "Please enter Baidu Netdisk share link",
+      "codeInput": "Please enter extraction code (if any)"
     }
   }
 }

@@ -9,6 +9,12 @@
     "contact": "获取密码",
     "howToUse": "怎么使用"
   },
+  "About": {
+    "title": "关于我",
+    "description": "我是一个正在学习Nextjs的菜鸟，这个项目是我学习Nextjs的第一个项目，希望你能喜欢。",
+    "skills": "我的技能",
+    "contact": "联系我"
+  },
   "parse": {
     "step1": "输入链接",
     "step2": "验证密码",
@@ -20,7 +26,10 @@
     "download": "下载文件",
     "success": "验证成功！您现在可以下载文件了。",
     "inputUrl": "百度网盘链接",
+    "inputUrlPlaceholder": "请输入百度网盘链接",
+    "inputUrlHint": "请输入正确的百度网盘链接",
     "inputPassword": "提取码",
+    "inputPasswordPlaceholder": "请输入提取码",
     "inputPasswordHint": "请输入正确的提取码",
     "parse": "解析",
     "pasteSuccess": "发现提取码,自动填充",
@@ -45,7 +54,52 @@
     "step3": {
       "title": "下载文件",
       "description": "点击下载按钮，即可下载文件"
+    },
+    "faqTitle": "常见问题",
+    "faq": {
+      "1": {
+        "question": "为什么解析失败？",
+        "answer": "请检查链接和提取码是否正确"
+      },
+      "2": {
+        "question": "验证密码失败怎么办？",
+        "answer": "前往公众号获取最新密码"
+      },
+      "3": {
+        "question": "解析验证失败怎么办？",
+        "answer": "尝试清除浏览器缓存或更换浏览器"
+      },
+      "4": {
+        "question": "连接RPC失败怎么办？",
+        "answer": "请点击如何使用，按照教程连接RPC"
+      },
+      "5": {
+        "question": "其他问题",
+        "answer": "联系作者"
+      }
     }
+  },
+  "Download": {
+    "title": "云解析下载",
+    "selectDownloadMethod": "选择下载方式",
+    "apiDownload": "API下载",
+    "rpcDownload": "RPC下载",
+    "rpcAddress": "RPC地址",
+    "rpcAddressPlaceholder": "请输入RPC地址",
+    "rpcAddressHint": "请输入正确的RPC地址",
+    "noFiles": "请先去解析链接,正在跳转...",
+    "testConnection": "测试连接",
+    "connected": "已连接 (Aria2 {version})",
+    "notConnected": "未连接",
+    "downloadDirectory": "下载目录",
+    "userAgent": "User-Agent",
+    "startDownload": "开始下载",
+    "testRPCConnectionSuccess": "测试 RPC 连接成功",
+    "testRPCConnectionFailed": "测试 RPC 连接失败",
+    "noDownloadableFiles": "没有可下载的文件",
+    "gettingDownloadLink": "正在获取下载链接...",
+    "downloadSelectedItems": "下载选中项目 ({count})",
+    "addedToRPCDownloadQueue": "已添加到 RPC 下载队列"
   },
   "HomePage": {
     "title": "FBD",
@@ -53,10 +107,23 @@
     "getStarted": "开始使用",
     "description": "快速解析百度网盘链接",
     "howToUse": "使用教程",
+    "totalParsed": "已解析文件",
+    "totalParsedDesc": "个文件成功解析",
+    "activeUsers": "活跃用户",
+    "activeUsersDesc": "位用户正在使用",
+    "successRate": "解析成功率",
+    "successRateDesc": "稳定可靠",
+    "featuresTitle": "核心优势",
+    "totalDownloads": "总下载量",
+    "totalDownloadsDesc": "次文件下载",
+
     "features": {
       "fast": "极速解析",
       "stable": "稳定可靠",
-      "simple": "简单易用"
+      "simple": "简单易用",
+      "fastDesc": "极速解析，无需等待，瞬间获取下载链接",
+      "stableDesc": "稳定可靠，99.9%的解析成功率",
+      "simpleDesc": "简单易用，三步完成文件下载"
     },
     "actions": {
       "parse": "开始解析",

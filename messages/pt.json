@@ -1,34 +1,140 @@
 {
   "HomePage": {
-    "title": "Análise em Nuvem",
-    "about": "Análise em Nuvem é uma ferramenta de análise baseada no Baidu Netdisk que permite analisar rapidamente links do Baidu Netdisk e oferece funcionalidade de download.",
+    "title": "FBD",
+    "about": "FBD é uma ferramenta de análise do Baidu Netdisk que suporta análise rápida de links e fornece funcionalidades de download.",
     "getStarted": "Começar",
     "description": "Análise rápida de links do Baidu Netdisk",
+    "howToUse": "Tutorial",
+    "totalParsed": "Arquivos analisados",
+    "totalParsedDesc": "arquivos analisados com sucesso",
+    "activeUsers": "Usuários ativos",
+    "activeUsersDesc": "usuários online",
+    "successRate": "Taxa de sucesso",
+    "successRateDesc": "Estável e confiável",
+    "featuresTitle": "Principais recursos",
+    "totalDownloads": "Total de downloads",
+    "totalDownloadsDesc": "downloads de arquivos",
     "features": {
-      "fast": "Análise ultrarrápida",
+      "fast": "Análise rápida",
       "stable": "Estável e confiável",
-      "simple": "Fácil de usar"
+      "simple": "Fácil de usar",
+      "fastDesc": "Análise rápida, sem espera, links de download instantâneos",
+      "stableDesc": "Estável e confiável, taxa de sucesso de análise de 99.9%",
+      "simpleDesc": "Fácil de usar, download de arquivos em três etapas"
     },
     "actions": {
       "parse": "Iniciar análise",
-      "download": "Baixar arquivo",
-      "login": "Entrar",
+      "download": "Download do arquivo",
+      "login": "Login",
       "register": "Registrar"
     },
     "placeholder": {
-      "linkInput": "Digite o link de compartilhamento do Baidu Netdisk",
-      "codeInput": "Digite o código de extração (se houver)"
+      "linkInput": "Insira o link de compartilhamento do Baidu Netdisk",
+      "codeInput": "Insira o código de extração (se houver)"
     }
   },
   "Menu": {
     "home": "Início",
     "about": "Sobre",
-    "download": "Baixar",
-    "contact": "Contato"
+    "download": "Download",
+    "contact": "Obter senha",
+    "howToUse": "Como usar"
   },
   "Common": {
     "switchLanguage": "Mudar idioma"
   },
   "hello-there": "",
-  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": ""
+  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": "",
+  "About": {
+    "title": "Sobre mim",
+    "description": "Sou um iniciante aprendendo Next.js, e este projeto é o meu primeiro projeto Next.js. Espero que você goste.",
+    "skills": "Minhas habilidades",
+    "contact": "Contato"
+  },
+  "parse": {
+    "step1": "Inserir link",
+    "step2": "Verificar senha",
+    "step3": "Download do arquivo",
+    "verifyPassword": "Verificar senha",
+    "getPassword": "Obter senha",
+    "loading": "Verificando...",
+    "verify": "Verificar",
+    "download": "Download do arquivo",
+    "success": "Verificação bem-sucedida! Agora você pode baixar o arquivo.",
+    "inputUrl": "Link Baidu Netdisk",
+    "inputUrlPlaceholder": "Insira o link do Baidu Netdisk",
+    "inputUrlHint": "Insira um link válido do Baidu Netdisk",
+    "inputPassword": "Código de extração",
+    "inputPasswordPlaceholder": "Insira o código de extração",
+    "inputPasswordHint": "Insira um código de extração válido",
+    "parse": "Analisar",
+    "pasteSuccess": "Código de extração encontrado, preenchimento automático",
+    "parseError": "Análise falhou, verifique o link e o código de extração",
+    "title": "Análise na nuvem",
+    "reset": "Analisar outro arquivo"
+  },
+  "HowToUse": {
+    "title": "Como usar",
+    "videoTitle": "Tutorial em vídeo",
+    "description": "Análise rápida de links do Baidu Netdisk",
+    "tipsTitle": "Dicas de uso",
+    "tips": ["Dica 1", "Dica 2", "Dica 3", "Dica 4", "Dica 5"],
+    "step1": {
+      "title": "Inserir link",
+      "description": "Insira o link do Baidu Netdisk"
+    },
+    "step2": {
+      "title": "Verificar senha",
+      "description": "Insira o código de extração"
+    },
+    "step3": {
+      "title": "Download do arquivo",
+      "description": "Clique no botão de download para baixar o arquivo"
+    },
+    "faqTitle": "Perguntas frequentes",
+    "faq": {
+      "1": {
+        "question": "Por que a análise falhou?",
+        "answer": "Verifique se o link e o código de extração estão corretos"
+      },
+      "2": {
+        "question": "O que fazer se a verificação da senha falhar?",
+        "answer": "Visite a conta oficial para obter a senha mais recente"
+      },
+      "3": {
+        "question": "O que fazer se a verificação da análise falhar?",
+        "answer": "Tente limpar o cache do navegador ou trocar de navegador"
+      },
+      "4": {
+        "question": "O que fazer se a conexão RPC falhar?",
+        "answer": "Clique em Como usar e siga o tutorial para conectar o RPC"
+      },
+      "5": {
+        "question": "Outros problemas",
+        "answer": "Entre em contato com o autor"
+      }
+    }
+  },
+  "Download": {
+    "title": "Download de análise na nuvem",
+    "selectDownloadMethod": "Selecione o método de download",
+    "apiDownload": "Download via API",
+    "rpcDownload": "Download via RPC",
+    "rpcAddress": "Endereço RPC",
+    "rpcAddressPlaceholder": "Insira o endereço RPC",
+    "rpcAddressHint": "Insira um endereço RPC válido",
+    "noFiles": "Analise o link primeiro, redirecionando...",
+    "testConnection": "Testar conexão",
+    "connected": "Conectado (Aria2 {version})",
+    "notConnected": "Não conectado",
+    "downloadDirectory": "Diretório de download",
+    "userAgent": "User-Agent",
+    "startDownload": "Iniciar download",
+    "testRPCConnectionSuccess": "Teste de conexão RPC bem-sucedido",
+    "testRPCConnectionFailed": "Teste de conexão RPC falhou",
+    "noDownloadableFiles": "Nenhum arquivo disponível para download",
+    "gettingDownloadLink": "Obtendo link de download...",
+    "downloadSelectedItems": "Download dos itens selecionados ({count})",
+    "addedToRPCDownloadQueue": "Adicionado à fila de download RPC"
+  }
 }

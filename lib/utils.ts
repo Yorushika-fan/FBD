@@ -1,5 +1,6 @@
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import { useLoadingStore } from '@/store/loading';
 /**
  * 合并 className，使用 tailwind-merge 处理冲突
  */
@@ -17,74 +18,6 @@ const formatFileSize = (bytes: number): string => {
 
   return `${(bytes / Math.pow(k, i)).toFixed(2)} ${units[i]}`;
 };
-
-/**
- * 判断路径是否为文件（通过检查是否包含文件扩展名）
- * @param path 需要判断的路径
- * @returns boolean - 如果是文件返回 true，否则返回 false
- */
-const isFile = (path: string): boolean => {
-  // Remove trailing slashes for consistency
-  const cleanPath = path.replace(/\/+$/, '');
-
-  // Get the last segment of the path
-  const fileName = cleanPath.split('/').pop() || '';
-
-  // Common file extensions regex (can be expanded as needed)
-  const fileExtRegex = /\.(pdf|txt|doc|docx|xls|xlsx|jpg|jpeg|png|gif|mp4|mp3|zip|rar|exe|json|js|ts|jsx|tsx)$/i;
-
-  // Check if the last segment has a valid file extension
-  // and doesn't start with a dot (hidden files)
-  return fileExtRegex.test(fileName) && !fileName.startsWith('.');
-};
-
-/**
- * Opens a URI using a hidden iframe and returns a promise that resolves to whether the URI was handled
- * @param uri The URI to open (e.g. motrix:// protocol)
- * @returns Promise<boolean> - true if the URI was handled, false if it timed out
- */
-export function openUri(uri: string): Promise<boolean> {
-  return new Promise((resolve) => {
-    // Create hidden iframe
-    const iframe = document.createElement('iframe');
-    iframe.style.display = 'none';
-    iframe.src = uri;
-    document.body.appendChild(iframe);
-
-    // Set up timeout check
-    const startTime = Date.now();
-    const task = setInterval(() => {
-      const endTime = Date.now();
-      if (endTime - startTime > 30) {
-        document.body.removeChild(iframe);
-        iframe.remove();
-        clearInterval(task);
-        resolve(false);
-        window.removeEventListener('blur', onBlur);
-      }
-    }, 50);
-
-    // Handle successful protocol activation
-    const onBlur = () => {
-      iframe.remove();
-      clearInterval(task);
-      resolve(true);
-    };
-
-    window.addEventListener('blur', onBlur, {
-      once: true,
-    });
-  });
-}
-
-/**
- * Sends a download task directly to Motrix via JSON-RPC
- * @param url The download URL
- * @param filename The name to save the file as
- * @param dir Optional subdirectory within the base download directory
- * @param userAgent Optional user agent string
- * @returns Promise<boolean> - true if the task was added successfully
- */
 
 const getBaiduUrl = (value: string) => {
   const result: {
@@ -110,4 +43,14 @@ const getBaiduUrl = (value: string) => {
   return result;
 };
 
-export { cn, formatFileSize, isFile, getBaiduUrl };
+const withLoading = async (fn: () => Promise<unknown>) => {
+  const { setLoading } = useLoadingStore.getState();
+  setLoading(true);
+  try {
+    return await fn();
+  } finally {
+    setLoading(false);
+  }
+};
+
+export { cn, formatFileSize, getBaiduUrl, withLoading };

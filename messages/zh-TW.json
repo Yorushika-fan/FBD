@@ -3,31 +3,137 @@
     "switchLanguage": "切換語言"
   },
   "HomePage": {
-    "title": "雲解析",
-    "about": "雲解析是一款基於百度網盤的解析工具，支持快速解析百度網盤鏈接，並提供下載功能。",
+    "title": "FBD",
+    "about": "FBD 是一個百度網盤解析工具，支援快速解析百度網盤連結並提供下載功能。",
     "getStarted": "開始使用",
-    "description": "快速解析百度網盤鏈接",
+    "description": "快速解析百度網盤連結",
+    "howToUse": "教學",
+    "totalParsed": "已解析檔案",
+    "totalParsedDesc": "檔案成功解析",
+    "activeUsers": "活躍用戶",
+    "activeUsersDesc": "用戶正在使用",
+    "successRate": "成功率",
+    "successRateDesc": "穩定可靠",
+    "featuresTitle": "主要優勢",
+    "totalDownloads": "總下載量",
+    "totalDownloadsDesc": "檔案下載",
     "features": {
-      "fast": "極速解析",
+      "fast": "快速解析",
       "stable": "穩定可靠",
-      "simple": "簡單易用"
+      "simple": "簡單易用",
+      "fastDesc": "快速解析，無需等待，即時下載連結",
+      "stableDesc": "穩定可靠，解析成功率 99.9%",
+      "simpleDesc": "簡單易用，三步完成檔案下載"
     },
     "actions": {
       "parse": "開始解析",
-      "download": "下載文件",
+      "download": "下載檔案",
       "login": "登入",
       "register": "註冊"
     },
     "placeholder": {
-      "linkInput": "請輸入百度網盤分享鏈接",
+      "linkInput": "請輸入百度網盤分享連結",
       "codeInput": "請輸入提取碼（如有）"
     }
   },
   "Menu": {
     "home": "首頁",
-    "about": "關於我們",
+    "about": "關於",
     "download": "下載",
-    "contact": "聯繫我們"
+    "contact": "獲取密碼",
+    "howToUse": "使用說明"
+  },
+  "About": {
+    "title": "關於我",
+    "description": "我是一個正在學習 Next.js 的初學者，這個專案是我的第一個 Next.js 專案。希望您會喜歡。",
+    "skills": "我的技能",
+    "contact": "聯絡我"
+  },
+  "parse": {
+    "step1": "輸入連結",
+    "step2": "驗證密碼",
+    "step3": "下載檔案",
+    "verifyPassword": "驗證密碼",
+    "getPassword": "獲取密碼",
+    "loading": "正在驗證...",
+    "verify": "驗證",
+    "download": "下載檔案",
+    "success": "驗證成功！您現在可以下載檔案了。",
+    "inputUrl": "百度網盤連結",
+    "inputUrlPlaceholder": "請輸入百度網盤連結",
+    "inputUrlHint": "請輸入有效的百度網盤連結",
+    "inputPassword": "提取碼",
+    "inputPasswordPlaceholder": "請輸入提取碼",
+    "inputPasswordHint": "請輸入有效的提取碼",
+    "parse": "解析",
+    "pasteSuccess": "已找到提取碼，自動填充",
+    "parseError": "解析失敗，請檢查連結和提取碼",
+    "title": "雲端解析",
+    "reset": "解析其他檔案"
+  },
+  "HowToUse": {
+    "title": "使用說明",
+    "videoTitle": "影片教學",
+    "description": "快速解析百度網盤連結",
+    "tipsTitle": "使用提示",
+    "tips": ["使用提示 1", "使用提示 2", "使用提示 3", "使用提示 4", "使用提示 5"],
+    "step1": {
+      "title": "輸入連結",
+      "description": "輸入百度網盤連結"
+    },
+    "step2": {
+      "title": "驗證密碼",
+      "description": "輸入提取碼"
+    },
+    "step3": {
+      "title": "下載檔案",
+      "description": "點擊下載按鈕下載檔案"
+    },
+    "faqTitle": "常見問題",
+    "faq": {
+      "1": {
+        "question": "為什麼解析失敗？",
+        "answer": "請檢查連結和提取碼是否正確"
+      },
+      "2": {
+        "question": "密碼驗證失敗怎麼辦？",
+        "answer": "請訪問官方帳號獲取最新密碼"
+      },
+      "3": {
+        "question": "解析驗證失敗怎麼辦？",
+        "answer": "請嘗試清除瀏覽器快取或更換瀏覽器"
+      },
+      "4": {
+        "question": "RPC 連接失敗怎麼辦？",
+        "answer": "請點擊使用說明並按照教學連接 RPC"
+      },
+      "5": {
+        "question": "其他問題",
+        "answer": "請聯絡作者"
+      }
+    }
+  },
+  "Download": {
+    "title": "雲端解析下載",
+    "selectDownloadMethod": "選擇下載方式",
+    "apiDownload": "API 下載",
+    "rpcDownload": "RPC 下載",
+    "rpcAddress": "RPC 地址",
+    "rpcAddressPlaceholder": "請輸入 RPC 地址",
+    "rpcAddressHint": "請輸入有效的 RPC 地址",
+    "noFiles": "請先解析連結，正在重新導向...",
+    "testConnection": "測試連接",
+    "connected": "已連接 (Aria2 {version})",
+    "notConnected": "未連接",
+    "downloadDirectory": "下載目錄",
+    "userAgent": "User-Agent",
+    "startDownload": "開始下載",
+    "testRPCConnectionSuccess": "RPC 連接測試成功",
+    "testRPCConnectionFailed": "RPC 連接測試失敗",
+    "noDownloadableFiles": "沒有可下載的檔案",
+    "gettingDownloadLink": "正在獲取下載連結...",
+    "downloadSelectedItems": "下載選中的項目 ({count})",
+    "addedToRPCDownloadQueue": "已加入 RPC 下載佇列"
   },
   "hello-there": ""
 }

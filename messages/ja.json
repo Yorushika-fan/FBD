@@ -1,16 +1,29 @@
 {
   "HomePage": {
-    "title": "クラウド解析",
-    "about": "クラウド解析はBaidu Netdiskベースの解析ツールで、Baidu Netdiskのリンクを素早く解析し、ダウンロード機能を提供します。",
-    "getStarted": "始める",
-    "description": "Baidu Netdiskリンクの高速解析",
+    "title": "FBD",
+    "about": "FBDはBaidu Netdisk解析ツールで、Baidu Netdiskリンクの素早い解析とダウンロード機能を提供します。",
+    "getStarted": "始めましょう",
+    "description": "Baidu Netdiskリンクを素早く解析",
+    "howToUse": "チュートリアル",
+    "totalParsed": "解析済みファイル",
+    "totalParsedDesc": "ファイルが正常に解析されました",
+    "activeUsers": "アクティブユーザー",
+    "activeUsersDesc": "ユーザーが使用中",
+    "successRate": "成功率",
+    "successRateDesc": "安定して信頼性が高い",
+    "featuresTitle": "主な特徴",
+    "totalDownloads": "総ダウンロード数",
+    "totalDownloadsDesc": "ファイルがダウンロードされました",
     "features": {
-      "fast": "超高速解析",
-      "stable": "安定性と信頼性",
-      "simple": "使いやすい"
+      "fast": "高速解析",
+      "stable": "安定して信頼性が高い",
+      "simple": "簡単に使用可能",
+      "fastDesc": "高速解析、待機時間なし、即時ダウンロードリンク",
+      "stableDesc": "安定して信頼性が高い、解析成功率99.9%",
+      "simpleDesc": "簡単に使用可能、3ステップでファイルダウンロード"
     },
     "actions": {
-      "parse": "解析開始",
+      "parse": "解析を開始",
       "download": "ファイルをダウンロード",
       "login": "ログイン",
       "register": "登録"
@@ -22,13 +35,106 @@
   },
   "Menu": {
     "home": "ホーム",
-    "about": "私たちについて",
+    "about": "概要",
     "download": "ダウンロード",
-    "contact": "お問い合わせ"
+    "contact": "パスワードを取得",
+    "howToUse": "使い方"
   },
   "Common": {
     "switchLanguage": "言語を切り替え"
   },
   "hello-there": "",
-  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": ""
+  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": "",
+  "About": {
+    "title": "自己紹介",
+    "description": "私はNext.jsを学んでいる初心者で、このプロジェクトは私の最初のNext.jsプロジェクトです。気に入っていただければ幸いです。",
+    "skills": "スキル",
+    "contact": "お問い合わせ"
+  },
+  "parse": {
+    "step1": "リンクを入力",
+    "step2": "パスワードを確認",
+    "step3": "ファイルをダウンロード",
+    "verifyPassword": "パスワードを確認",
+    "getPassword": "パスワードを取得",
+    "loading": "確認中...",
+    "verify": "確認",
+    "download": "ファイルをダウンロード",
+    "success": "確認成功！ファイルをダウンロードできます。",
+    "inputUrl": "Baidu Netdiskリンク",
+    "inputUrlPlaceholder": "Baidu Netdiskリンクを入力してください",
+    "inputUrlHint": "有効なBaidu Netdiskリンクを入力してください",
+    "inputPassword": "抽出コード",
+    "inputPasswordPlaceholder": "抽出コードを入力してください",
+    "inputPasswordHint": "有効な抽出コードを入力してください",
+    "parse": "解析",
+    "pasteSuccess": "抽出コードが見つかりました、自動入力",
+    "parseError": "解析に失敗しました、リンクと抽出コードを確認してください",
+    "title": "クラウド解析",
+    "reset": "他のファイルを解析"
+  },
+  "HowToUse": {
+    "title": "使い方",
+    "videoTitle": "ビデオチュートリアル",
+    "description": "Baidu Netdiskリンクを素早く解析",
+    "tipsTitle": "使用のヒント",
+    "tips": ["ヒント1", "ヒント2", "ヒント3", "ヒント4", "ヒント5"],
+    "step1": {
+      "title": "リンクを入力",
+      "description": "Baidu Netdiskリンクを入力"
+    },
+    "step2": {
+      "title": "パスワードを確認",
+      "description": "抽出コードを入力"
+    },
+    "step3": {
+      "title": "ファイルをダウンロード",
+      "description": "ダウンロードボタンをクリックしてファイルをダウンロード"
+    },
+    "faqTitle": "よくある質問",
+    "faq": {
+      "1": {
+        "question": "なぜ解析に失敗しましたか？",
+        "answer": "リンクと抽出コードが正しいか確認してください"
+      },
+      "2": {
+        "question": "パスワード確認に失敗した場合はどうすればよいですか？",
+        "answer": "公式アカウントにアクセスして最新のパスワードを取得してください"
+      },
+      "3": {
+        "question": "解析確認に失敗した場合はどうすればよいですか？",
+        "answer": "ブラウザのキャッシュをクリアするか、ブラウザを変更してみてください"
+      },
+      "4": {
+        "question": "RPC接続に失敗した場合はどうすればよいですか？",
+        "answer": "使い方をクリックし、チュートリアルに従ってRPCを接続してください"
+      },
+      "5": {
+        "question": "その他の問題",
+        "answer": "作者に連絡してください"
+      }
+    }
+  },
+  "Download": {
+    "title": "クラウド解析ダウンロード",
+    "selectDownloadMethod": "ダウンロード方法を選択",
+    "apiDownload": "APIダウンロード",
+    "rpcDownload": "RPCダウンロード",
+    "rpcAddress": "RPCアドレス",
+    "rpcAddressPlaceholder": "RPCアドレスを入力してください",
+    "rpcAddressHint": "有効なRPCアドレスを入力してください",
+    "noFiles": "まずリンクを解析してください、リダイレクト中...",
+    "testConnection": "接続をテスト",
+    "connected": "接続済み (Aria2 {version})",
+    "notConnected": "未接続",
+    "downloadDirectory": "ダウンロードディレクトリ",
+    "userAgent": "User-Agent",
+    "startDownload": "ダウンロードを開始",
+    "testRPCConnectionSuccess": "RPC接続テスト成功",
+    "testRPCConnectionFailed": "RPC接続テスト失敗",
+    "noDownloadableFiles": "ダウンロード可能なファイルがありません",
+    "gettingDownloadLink": "ダウンロードリンクを取得中...",
+    "downloadSelectedItems": "選択した項目をダウンロード ({count})",
+    "addedToRPCDownloadQueue": "RPCダウンロードキューに追加されました"
+  }
 }

@@ -72,36 +72,36 @@ export default function Home() {
               <div className="stat-figure text-primary">
                 <FaCloudDownloadAlt className="text-4xl" />
               </div>
-              <div className="stat-title text-base-content/70">已解析文件</div>
+              <div className="stat-title text-base-content/70">{t('totalParsed')}</div>
               <div className="stat-value text-primary">{stats.totalParsed.toLocaleString()}</div>
-              <div className="stat-desc text-base-content/60">个文件成功解析</div>
+              <div className="stat-desc text-base-content/60">{t('totalParsedDesc')}</div>
             </div>
 
             <div className="stat bg-base-200/80 rounded-box border-base-300/20 border p-6 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl">
               <div className="stat-figure text-secondary">
                 <FaUserFriends className="text-4xl" />
               </div>
-              <div className="stat-title text-base-content/70">活跃用户</div>
+              <div className="stat-title text-base-content/70">{t('activeUsers')}</div>
               <div className="stat-value text-secondary">{stats.activeUsers.toLocaleString()}</div>
-              <div className="stat-desc text-base-content/60">位用户正在使用</div>
+              <div className="stat-desc text-base-content/60">{t('activeUsersDesc')}</div>
             </div>
 
             <div className="stat bg-base-200/80 rounded-box border-base-300/20 border p-6 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl">
               <div className="stat-figure text-accent">
                 <FaShieldAlt className="text-4xl" />
               </div>
-              <div className="stat-title text-base-content/70">解析成功率</div>
+              <div className="stat-title text-base-content/70">{t('successRate')}</div>
               <div className="stat-value text-accent">{stats.successRate}%</div>
-              <div className="stat-desc text-base-content/60">稳定可靠</div>
+              <div className="stat-desc text-base-content/60">{t('successRateDesc')}</div>
             </div>
 
             <div className="stat bg-base-200/80 rounded-box border-base-300/20 border p-6 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl">
               <div className="stat-figure text-primary">
                 <FaBolt className="text-4xl" />
               </div>
-              <div className="stat-title text-base-content/70">总下载量</div>
+              <div className="stat-title text-base-content/70">{t('totalDownloads')}</div>
               <div className="stat-value text-primary">{stats.totalDownloads.toLocaleString()}</div>
-              <div className="stat-desc text-base-content/60">次文件下载</div>
+              <div className="stat-desc text-base-content/60">{t('totalDownloadsDesc')}</div>
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@ export default function Home() {
         <div className="via-base-200/50 absolute inset-0 bg-gradient-to-b from-transparent to-transparent"></div>
         <div className="relative z-10 container mx-auto px-4">
           <h2 className="from-primary to-secondary mb-16 bg-gradient-to-r bg-clip-text text-center text-4xl font-bold text-transparent">
-            核心优势
+            {t('featuresTitle')}
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div className="card bg-base-100/80 border-base-300/20 group border shadow-xl backdrop-blur-sm transition-all duration-300 hover:shadow-2xl">
@@ -123,7 +123,7 @@ export default function Home() {
                   </div>
                   <h3 className="card-title text-xl">{t('features.fast')}</h3>
                 </div>
-                <p className="text-base-content/70">极速解析，无需等待，瞬间获取下载链接</p>
+                <p className="text-base-content/70">{t('features.fastDesc')}</p>
               </div>
             </div>
 
@@ -135,7 +135,7 @@ export default function Home() {
                   </div>
                   <h3 className="card-title text-xl">{t('features.stable')}</h3>
                 </div>
-                <p className="text-base-content/70">稳定可靠，99.9%的解析成功率</p>
+                <p className="text-base-content/70">{t('features.stableDesc')}</p>
               </div>
             </div>
 
@@ -147,7 +147,7 @@ export default function Home() {
                   </div>
                   <h3 className="card-title text-xl">{t('features.simple')}</h3>
                 </div>
-                <p className="text-base-content/70">简单易用，三步完成文件下载</p>
+                <p className="text-base-content/70">{t('features.simpleDesc')}</p>
               </div>
             </div>
           </div>

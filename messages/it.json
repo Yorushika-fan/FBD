@@ -1,13 +1,26 @@
 {
   "HomePage": {
-    "title": "Analisi Cloud",
-    "about": "Analisi Cloud è uno strumento di analisi basato su Baidu Netdisk che consente di analizzare rapidamente i link di Baidu Netdisk e offre funzionalità di download.",
+    "title": "FBD",
+    "about": "FBD è uno strumento di analisi Baidu Netdisk che supporta l'analisi rapida dei link Baidu Netdisk e fornisce funzionalità di download.",
     "getStarted": "Inizia",
-    "description": "Analisi rapida dei link di Baidu Netdisk",
+    "description": "Analizza rapidamente i link Baidu Netdisk",
+    "howToUse": "Tutorial",
+    "totalParsed": "File analizzati",
+    "totalParsedDesc": "file analizzati con successo",
+    "activeUsers": "Utenti attivi",
+    "activeUsersDesc": "utenti attualmente online",
+    "successRate": "Tasso di successo",
+    "successRateDesc": "Stabile e affidabile",
+    "featuresTitle": "Vantaggi principali",
+    "totalDownloads": "Download totali",
+    "totalDownloadsDesc": "download di file",
     "features": {
-      "fast": "Analisi ad alta velocità",
+      "fast": "Analisi veloce",
       "stable": "Stabile e affidabile",
-      "simple": "Facile da usare"
+      "simple": "Facile da usare",
+      "fastDesc": "Analisi veloce, nessuna attesa, link di download istantanei",
+      "stableDesc": "Stabile e affidabile, tasso di successo dell'analisi del 99.9%",
+      "simpleDesc": "Facile da usare, download di file in tre passaggi"
     },
     "actions": {
       "parse": "Inizia analisi",
@@ -16,7 +29,7 @@
       "register": "Registrati"
     },
     "placeholder": {
-      "linkInput": "Inserisci il link di condivisione di Baidu Netdisk",
+      "linkInput": "Inserisci il link di condivisione Baidu Netdisk",
       "codeInput": "Inserisci il codice di estrazione (se presente)"
     }
   },
@@ -24,10 +37,103 @@
     "home": "Home",
     "about": "Chi siamo",
     "download": "Scarica",
-    "contact": "Contatti"
+    "contact": "Ottieni password",
+    "howToUse": "Come usare"
   },
   "Common": {
     "switchLanguage": "Cambia lingua"
+  },
+  "About": {
+    "title": "Chi sono",
+    "description": "Sono un principiante che sta imparando Next.js, e questo progetto è il mio primo progetto Next.js. Spero che ti piaccia.",
+    "skills": "Le mie competenze",
+    "contact": "Contattami"
+  },
+  "parse": {
+    "step1": "Inserisci link",
+    "step2": "Verifica password",
+    "step3": "Scarica file",
+    "verifyPassword": "Verifica password",
+    "getPassword": "Ottieni password",
+    "loading": "Verifica in corso...",
+    "verify": "Verifica",
+    "download": "Scarica file",
+    "success": "Verifica riuscita! Ora puoi scaricare il file.",
+    "inputUrl": "Link Baidu Netdisk",
+    "inputUrlPlaceholder": "Inserisci il link Baidu Netdisk",
+    "inputUrlHint": "Inserisci un link Baidu Netdisk valido",
+    "inputPassword": "Codice di estrazione",
+    "inputPasswordPlaceholder": "Inserisci il codice di estrazione",
+    "inputPasswordHint": "Inserisci un codice di estrazione valido",
+    "parse": "Analizza",
+    "pasteSuccess": "Codice di estrazione trovato, compilazione automatica",
+    "parseError": "Analisi fallita, controlla il link e il codice di estrazione",
+    "title": "Analisi cloud",
+    "reset": "Analizza un altro file"
+  },
+  "HowToUse": {
+    "title": "Come usare",
+    "videoTitle": "Video tutorial",
+    "description": "Analizza rapidamente i link Baidu Netdisk",
+    "tipsTitle": "Suggerimenti per l'uso",
+    "tips": ["Suggerimento 1", "Suggerimento 2", "Suggerimento 3", "Suggerimento 4", "Suggerimento 5"],
+    "step1": {
+      "title": "Inserisci link",
+      "description": "Inserisci il link Baidu Netdisk"
+    },
+    "step2": {
+      "title": "Verifica password",
+      "description": "Inserisci il codice di estrazione"
+    },
+    "step3": {
+      "title": "Scarica file",
+      "description": "Clicca sul pulsante di download per scaricare il file"
+    },
+    "faqTitle": "FAQ",
+    "faq": {
+      "1": {
+        "question": "Perché l'analisi è fallita?",
+        "answer": "Controlla se il link e il codice di estrazione sono corretti"
+      },
+      "2": {
+        "question": "Cosa fare se la verifica della password fallisce?",
+        "answer": "Visita l'account ufficiale per ottenere la password più recente"
+      },
+      "3": {
+        "question": "Cosa fare se la verifica dell'analisi fallisce?",
+        "answer": "Prova a cancellare la cache del browser o a cambiare browser"
+      },
+      "4": {
+        "question": "Cosa fare se la connessione RPC fallisce?",
+        "answer": "Clicca su Come usare e segui il tutorial per connettere RPC"
+      },
+      "5": {
+        "question": "Altri problemi",
+        "answer": "Contatta l'autore"
+      }
+    }
+  },
+  "Download": {
+    "title": "Download analisi cloud",
+    "selectDownloadMethod": "Seleziona metodo di download",
+    "apiDownload": "Download API",
+    "rpcDownload": "Download RPC",
+    "rpcAddress": "Indirizzo RPC",
+    "rpcAddressPlaceholder": "Inserisci l'indirizzo RPC",
+    "rpcAddressHint": "Inserisci un indirizzo RPC valido",
+    "noFiles": "Analizza prima il link, reindirizzamento in corso...",
+    "testConnection": "Testa connessione",
+    "connected": "Connesso (Aria2 {version})",
+    "notConnected": "Non connesso",
+    "downloadDirectory": "Directory di download",
+    "userAgent": "User-Agent",
+    "startDownload": "Inizia download",
+    "testRPCConnectionSuccess": "Test connessione RPC riuscito",
+    "testRPCConnectionFailed": "Test connessione RPC fallito",
+    "noDownloadableFiles": "Nessun file scaricabile",
+    "gettingDownloadLink": "Recupero link di download...",
+    "downloadSelectedItems": "Scarica elementi selezionati ({count})",
+    "addedToRPCDownloadQueue": "Aggiunto alla coda di download RPC"
   },
   "hello-there": "",
   "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": ""

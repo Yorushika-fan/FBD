@@ -1,16 +1,29 @@
 {
   "HomePage": {
-    "title": "클라우드 파싱",
-    "about": "클라우드 파싱은 Baidu Netdisk 기반의 파싱 도구로, Baidu Netdisk 링크를 빠르게 파싱하고 다운로드 기능을 제공합니다.",
+    "title": "FBD",
+    "about": "FBD는 Baidu Netdisk 분석 도구로, Baidu Netdisk 링크의 빠른 분석과 다운로드 기능을 제공합니다.",
     "getStarted": "시작하기",
-    "description": "Baidu Netdisk 링크 빠른 파싱",
+    "description": "Baidu Netdisk 링크 빠른 분석",
+    "howToUse": "튜토리얼",
+    "totalParsed": "분석된 파일",
+    "totalParsedDesc": "파일이 성공적으로 분석되었습니다",
+    "activeUsers": "활성 사용자",
+    "activeUsersDesc": "사용자가 사용 중입니다",
+    "successRate": "성공률",
+    "successRateDesc": "안정적이고 신뢰할 수 있습니다",
+    "featuresTitle": "주요 특징",
+    "totalDownloads": "총 다운로드",
+    "totalDownloadsDesc": "파일이 다운로드되었습니다",
     "features": {
-      "fast": "초고속 파싱",
-      "stable": "안정적이고 신뢰성 있는",
-      "simple": "사용하기 쉬운"
+      "fast": "빠른 분석",
+      "stable": "안정적이고 신뢰할 수 있습니다",
+      "simple": "사용하기 쉽습니다",
+      "fastDesc": "빠른 분석, 대기 시간 없음, 즉시 다운로드 링크",
+      "stableDesc": "안정적이고 신뢰할 수 있습니다, 분석 성공률 99.9%",
+      "simpleDesc": "사용하기 쉽습니다, 3단계로 파일 다운로드"
     },
     "actions": {
-      "parse": "파싱 시작",
+      "parse": "분석 시작",
       "download": "파일 다운로드",
       "login": "로그인",
       "register": "회원가입"
@@ -24,11 +37,104 @@
     "home": "홈",
     "about": "소개",
     "download": "다운로드",
-    "contact": "문의하기"
+    "contact": "비밀번호 받기",
+    "howToUse": "사용 방법"
   },
   "Common": {
     "switchLanguage": "언어 변경"
   },
   "hello-there": "",
-  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": ""
+  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": "",
+  "About": {
+    "title": "소개",
+    "description": "저는 Next.js를 배우는 초보자이며, 이 프로젝트는 제 첫 번째 Next.js 프로젝트입니다. 즐겨주시면 감사하겠습니다.",
+    "skills": "보유 기술",
+    "contact": "연락하기"
+  },
+  "parse": {
+    "step1": "링크 입력",
+    "step2": "비밀번호 확인",
+    "step3": "파일 다운로드",
+    "verifyPassword": "비밀번호 확인",
+    "getPassword": "비밀번호 받기",
+    "loading": "확인 중...",
+    "verify": "확인",
+    "download": "파일 다운로드",
+    "success": "확인 성공! 이제 파일을 다운로드할 수 있습니다.",
+    "inputUrl": "Baidu Netdisk 링크",
+    "inputUrlPlaceholder": "Baidu Netdisk 링크를 입력하세요",
+    "inputUrlHint": "유효한 Baidu Netdisk 링크를 입력하세요",
+    "inputPassword": "추출 코드",
+    "inputPasswordPlaceholder": "추출 코드를 입력하세요",
+    "inputPasswordHint": "유효한 추출 코드를 입력하세요",
+    "parse": "분석",
+    "pasteSuccess": "추출 코드를 찾았습니다, 자동 입력",
+    "parseError": "분석 실패, 링크와 추출 코드를 확인하세요",
+    "title": "클라우드 분석",
+    "reset": "다른 파일 분석"
+  },
+  "HowToUse": {
+    "title": "사용 방법",
+    "videoTitle": "비디오 튜토리얼",
+    "description": "Baidu Netdisk 링크 빠른 분석",
+    "tipsTitle": "사용 팁",
+    "tips": ["팁 1", "팁 2", "팁 3", "팁 4", "팁 5"],
+    "step1": {
+      "title": "링크 입력",
+      "description": "Baidu Netdisk 링크를 입력하세요"
+    },
+    "step2": {
+      "title": "비밀번호 확인",
+      "description": "추출 코드를 입력하세요"
+    },
+    "step3": {
+      "title": "파일 다운로드",
+      "description": "다운로드 버튼을 클릭하여 파일을 다운로드하세요"
+    },
+    "faqTitle": "자주 묻는 질문",
+    "faq": {
+      "1": {
+        "question": "분석이 실패한 이유는 무엇인가요?",
+        "answer": "링크와 추출 코드가 올바른지 확인하세요"
+      },
+      "2": {
+        "question": "비밀번호 확인이 실패하면 어떻게 해야 하나요?",
+        "answer": "공식 계정을 방문하여 최신 비밀번호를 받으세요"
+      },
+      "3": {
+        "question": "분석 확인이 실패하면 어떻게 해야 하나요?",
+        "answer": "브라우저 캐시를 지우거나 브라우저를 변경해 보세요"
+      },
+      "4": {
+        "question": "RPC 연결이 실패하면 어떻게 해야 하나요?",
+        "answer": "사용 방법을 클릭하고 튜토리얼에 따라 RPC를 연결하세요"
+      },
+      "5": {
+        "question": "기타 문제",
+        "answer": "작성자에게 연락하세요"
+      }
+    }
+  },
+  "Download": {
+    "title": "클라우드 분석 다운로드",
+    "selectDownloadMethod": "다운로드 방법 선택",
+    "apiDownload": "API 다운로드",
+    "rpcDownload": "RPC 다운로드",
+    "rpcAddress": "RPC 주소",
+    "rpcAddressPlaceholder": "RPC 주소를 입력하세요",
+    "rpcAddressHint": "유효한 RPC 주소를 입력하세요",
+    "noFiles": "먼저 링크를 분석하세요, 리다이렉트 중...",
+    "testConnection": "연결 테스트",
+    "connected": "연결됨 (Aria2 {version})",
+    "notConnected": "연결되지 않음",
+    "downloadDirectory": "다운로드 디렉토리",
+    "userAgent": "User-Agent",
+    "startDownload": "다운로드 시작",
+    "testRPCConnectionSuccess": "RPC 연결 테스트 성공",
+    "testRPCConnectionFailed": "RPC 연결 테스트 실패",
+    "noDownloadableFiles": "다운로드 가능한 파일이 없습니다",
+    "gettingDownloadLink": "다운로드 링크를 가져오는 중...",
+    "downloadSelectedItems": "선택한 항목 다운로드 ({count})",
+    "addedToRPCDownloadQueue": "RPC 다운로드 대기열에 추가되었습니다"
+  }
 }

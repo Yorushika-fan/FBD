@@ -11,6 +11,7 @@ import { formatFileSize } from '@/lib/utils';
 import { Tree, TreeCheckboxSelectionKeys, TreeSelectionEvent } from 'primereact/tree';
 import { TreeNode } from 'primereact/treenode';
 import { toast } from 'sonner';
+import { useTranslations } from 'next-intl';
 
 const Download = () => {
   const [selectedKeys, setSelectedKeys] = useState<TreeCheckboxSelectionKeys | null>(null);
@@ -21,7 +22,7 @@ const Download = () => {
   const router = useRouter();
   const { node, isInitialized, surl, password, setNodeChildren } = useBaiduStore();
   const [selectedFiles, setSelectedFiles] = useState<{ id: string; path: string }[]>([]);
-
+  const t = useTranslations('Download');
   const findNodeByKey = useCallback((nodes: TreeNode[], key: string): TreeNode | null => {
     for (const node of nodes) {
       if (node.key === key) {
@@ -101,7 +102,10 @@ const Download = () => {
       try {
         if (!isInitialized) return;
         if (!node || node.length === 0) {
-          router.push('/parse');
+          toast.error(t('noFiles'));
+          setTimeout(() => {
+            router.push('/parse');
+          }, 1000);
         }
       } catch {
         router.push('/parse');
@@ -113,14 +117,13 @@ const Download = () => {
     };
 
     checkAndLoadFiles();
-  }, [router, node, isInitialized]);
+  }, [router, node, isInitialized, t]);
 
   const handleNodeExpand = async (e: { node: TreeNode }) => {
     const path = e.node.key as string;
     const leaf = e.node.leaf;
     if (!leaf && !e.node.children) {
       try {
-        toast.loading('加载中...');
         setNodeLoading(true);
         const res = await getFileList({
           surl,
@@ -128,12 +131,10 @@ const Download = () => {
           isroot: false,
           dir: path,
         });
-        await setNodeChildren(path, res.data.list);
-      } catch {
-        toast.error('加载目录失败');
+        const { list } = res;
+        await setNodeChildren(path, list);
       } finally {
         setNodeLoading(false);
-        toast.dismiss();
       }
     }
     setExpandedKeys({
@@ -155,8 +156,6 @@ const Download = () => {
     }
   };
 
-  const handleSelectAll = () => {};
-
   if (loading || !isInitialized) {
     return (
       <div className="flex h-screen items-center justify-center">
@@ -168,8 +167,8 @@ const Download = () => {
   return (
     <div className="mx-auto max-w-4xl p-4">
       <div className="mb-4 flex items-center justify-between">
-        <h1 className="text-base-content text-2xl font-bold">云解析下载</h1>
-        <div className="flex items-center gap-2">
+        <h1 className="text-base-content text-2xl font-bold">{t('title')}</h1>
+        {/* <div className="flex items-center gap-2">
           <button className="btn btn-primary btn-sm" onClick={handleSelectAll}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -227,12 +226,7 @@ const Download = () => {
             </svg>
             全部展开
           </button>
-          {/* {selectedFilesCount > 0 && (
-            <button className="btn btn-primary btn-sm" onClick={handleDownload} disabled={transferLoading}>
-              {transferLoading ? '下载中...' : '批量下载'}
-            </button>
-          )} */}
-        </div>
+        </div> */}
       </div>
       <div className="card bg-base-200 shadow-xl">
         <div className="h-[calc(100vh-200px)] overflow-y-auto p-4">
