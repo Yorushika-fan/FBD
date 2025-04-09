@@ -30,7 +30,7 @@ const Download = () => {
     }
 
     try {
-      const { uuid } = await getToken(verifyCode);
+      const { uuid } = (await getToken(verifyCode)) as { uuid: string };
       setUuid(uuid);
       updateCurrentStep(3);
     } catch (error) {
