@@ -3,8 +3,28 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 
 const skills = ['React', 'Next.js', 'TypeScript', 'TailwindCSS', 'Java', 'SpringBoot', 'MySQL'];
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('About');
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: [t('keywords')],
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+    },
+    twitter: {
+      title: t('title'),
+      description: t('description'),
+    },
+  };
+}
 
 export default function AboutPage() {
   const t = useTranslations('About');

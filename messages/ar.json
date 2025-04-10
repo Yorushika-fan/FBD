@@ -5,6 +5,7 @@
     "getStarted": "ابدأ الآن",
     "description": "تحليل روابط Baidu Netdisk بسرعة",
     "howToUse": "البرنامج التعليمي",
+    "keywords": "Baidu Netdisk, تحليل, تحميل, تخزين سحابي",
     "totalParsed": "الملفات المحللة",
     "totalParsedDesc": "ملف تم تحليله بنجاح",
     "activeUsers": "المستخدمون النشطون",
@@ -49,7 +50,8 @@
     "title": "حول",
     "description": "أنا مبتدئ في تعلم Next.js، وهذا المشروع هو أول مشروع لي في Next.js. أتمنى أن يعجبك.",
     "skills": "مهاراتي",
-    "contact": "اتصل بي"
+    "contact": "اتصل بي",
+    "keywords": "Next.js, React, TypeScript, تطوير الواجهة الأمامية"
   },
   "parse": {
     "step1": "أدخل الرابط",
@@ -117,6 +119,7 @@
   },
   "Download": {
     "title": "تحميل التحليل السحابي",
+    "description": "تحميل سريع لملفات Baidu Netdisk، يدعم طرق التحميل API و RPC",
     "selectDownloadMethod": "اختر طريقة التحميل",
     "apiDownload": "تحميل API",
     "rpcDownload": "تحميل RPC",
@@ -135,6 +138,7 @@
     "noDownloadableFiles": "لا توجد ملفات قابلة للتحميل",
     "gettingDownloadLink": "جاري الحصول على رابط التحميل...",
     "downloadSelectedItems": "تحميل العناصر المحددة ({count})",
-    "addedToRPCDownloadQueue": "تمت إضافته إلى قائمة انتظار تحميل RPC"
+    "addedToRPCDownloadQueue": "تمت إضافته إلى قائمة انتظار تحميل RPC",
+    "keywords": "تحميل, Baidu Netdisk, RPC, API"
   }
 }

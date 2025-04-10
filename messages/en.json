@@ -13,7 +13,8 @@
     "title": "About Me",
     "description": "I am a beginner learning Next.js, and this project is my first Next.js project. I hope you like it.",
     "skills": "My Skills",
-    "contact": "Contact Me"
+    "contact": "Contact Me",
+    "keywords": "Next.js, React, TypeScript, Frontend Development"
   },
   "parse": {
     "step1": "Enter Link",
@@ -81,6 +82,7 @@
   },
   "Download": {
     "title": "Cloud Parse Download",
+    "description": "Quickly download Baidu Netdisk files, supporting both API and RPC download methods",
     "selectDownloadMethod": "Select Download Method",
     "apiDownload": "API Download",
     "rpcDownload": "RPC Download",
@@ -99,7 +101,8 @@
     "noDownloadableFiles": "No downloadable files",
     "gettingDownloadLink": "Getting download link...",
     "downloadSelectedItems": "Download selected items ({count})",
-    "addedToRPCDownloadQueue": "Added to RPC download queue"
+    "addedToRPCDownloadQueue": "Added to RPC download queue",
+    "keywords": "Download, Baidu Netdisk, RPC, API"
   },
   "HomePage": {
     "title": "FBD",
@@ -107,6 +110,7 @@
     "getStarted": "Get Started",
     "description": "Quickly parse Baidu Netdisk links",
     "howToUse": "Tutorial",
+    "keywords": "Baidu Netdisk, Parse, Download, Cloud Storage",
     "totalParsed": "Parsed Files",
     "totalParsedDesc": "files successfully parsed",
     "activeUsers": "Active Users",

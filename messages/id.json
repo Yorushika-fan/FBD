@@ -13,7 +13,8 @@
     "title": "Tentang Saya",
     "description": "Saya adalah pemula yang sedang belajar Next.js, dan proyek ini adalah proyek Next.js pertama saya. Saya harap Anda menyukainya.",
     "skills": "Keterampilan Saya",
-    "contact": "Hubungi Saya"
+    "contact": "Hubungi Saya",
+    "keywords": "Next.js, React, TypeScript, Pengembangan Frontend"
   },
   "parse": {
     "step1": "Masukkan Tautan",
@@ -81,6 +82,7 @@
   },
   "Download": {
     "title": "Unduh Analisis Cloud",
+    "description": "Unduh berkas Baidu Netdisk dengan cepat, mendukung metode unduh API dan RPC",
     "selectDownloadMethod": "Pilih Metode Unduh",
     "apiDownload": "Unduh API",
     "rpcDownload": "Unduh RPC",
@@ -99,7 +101,8 @@
     "noDownloadableFiles": "Tidak ada berkas yang dapat diunduh",
     "gettingDownloadLink": "Mendapatkan tautan unduh...",
     "downloadSelectedItems": "Unduh item yang dipilih ({count})",
-    "addedToRPCDownloadQueue": "Ditambahkan ke antrian unduh RPC"
+    "addedToRPCDownloadQueue": "Ditambahkan ke antrian unduh RPC",
+    "keywords": "Unduh, Baidu Netdisk, RPC, API"
   },
   "HomePage": {
     "title": "FBD",
@@ -107,6 +110,7 @@
     "getStarted": "Mulai",
     "description": "Analisis cepat tautan Baidu Netdisk",
     "howToUse": "Tutorial",
+    "keywords": "Baidu Netdisk, Analisis, Unduh, Penyimpanan Cloud",
     "totalParsed": "Berkas Dianalisis",
     "totalParsedDesc": "berkas berhasil dianalisis",
     "activeUsers": "Pengguna Aktif",

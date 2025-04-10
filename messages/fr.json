@@ -5,6 +5,7 @@
     "getStarted": "Commencer",
     "description": "Analyser rapidement les liens Baidu Netdisk",
     "howToUse": "Tutoriel",
+    "keywords": "Baidu Netdisk, Analyse, Téléchargement, Stockage cloud",
     "totalParsed": "Fichiers analysés",
     "totalParsedDesc": "fichiers analysés avec succès",
     "activeUsers": "Utilisateurs actifs",
@@ -43,13 +44,12 @@
   "Common": {
     "switchLanguage": "Changer de langue"
   },
-  "hello-there": "",
-  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": "",
   "About": {
     "title": "À propos de moi",
     "description": "Je suis un débutant qui apprend Next.js, et ce projet est mon premier projet Next.js. J'espère que vous l'apprécierez.",
     "skills": "Mes compétences",
-    "contact": "Contactez-moi"
+    "contact": "Contactez-moi",
+    "keywords": "Next.js, React, TypeScript, Développement Frontend"
   },
   "parse": {
     "step1": "Entrer le lien",
@@ -123,6 +123,7 @@
   },
   "Download": {
     "title": "Téléchargement d'analyse cloud",
+    "description": "Télécharger rapidement les fichiers Baidu Netdisk, prenant en charge les méthodes de téléchargement API et RPC",
     "selectDownloadMethod": "Sélectionner la méthode de téléchargement",
     "apiDownload": "Téléchargement API",
     "rpcDownload": "Téléchargement RPC",
@@ -141,6 +142,7 @@
     "noDownloadableFiles": "Aucun fichier téléchargeable",
     "gettingDownloadLink": "Obtention du lien de téléchargement...",
     "downloadSelectedItems": "Télécharger les éléments sélectionnés ({count})",
-    "addedToRPCDownloadQueue": "Ajouté à la file d'attente de téléchargement RPC"
+    "addedToRPCDownloadQueue": "Ajouté à la file d'attente de téléchargement RPC",
+    "keywords": "Téléchargement, Baidu Netdisk, RPC, API"
   }
 }

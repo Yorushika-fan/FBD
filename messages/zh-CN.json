@@ -13,7 +13,8 @@
     "title": "关于我",
     "description": "我是一个正在学习Nextjs的菜鸟，这个项目是我学习Nextjs的第一个项目，希望你能喜欢。",
     "skills": "我的技能",
-    "contact": "联系我"
+    "contact": "联系我",
+    "keywords": "Nextjs,React,TypeScript,前端开发"
   },
   "parse": {
     "step1": "输入链接",
@@ -35,12 +36,15 @@
     "pasteSuccess": "发现提取码,自动填充",
     "parseError": "解析失败,请检查链接和提取码",
     "title": "云解析",
-    "reset": "解析其他文件"
+    "reset": "解析其他文件",
+    "description": "快速解析百度网盘链接，支持批量解析和下载",
+    "keywords": "百度网盘,解析,下载,批量下载"
   },
   "HowToUse": {
     "title": "怎么使用",
     "videoTitle": "视频教程",
     "description": "快速解析百度网盘链接",
+    "keywords": "使用教程,百度网盘,解析,下载,教程",
     "tipsTitle": "使用提示",
     "tips": ["使用提示1", "使用提示2", "使用提示3", "使用提示4", "使用提示5"],
     "step1": {
@@ -81,6 +85,7 @@
   },
   "Download": {
     "title": "云解析下载",
+    "description": "快速下载百度网盘文件，支持 API 和 RPC 两种下载方式",
     "selectDownloadMethod": "选择下载方式",
     "apiDownload": "API下载",
     "rpcDownload": "RPC下载",
@@ -99,7 +104,8 @@
     "noDownloadableFiles": "没有可下载的文件",
     "gettingDownloadLink": "正在获取下载链接...",
     "downloadSelectedItems": "下载选中项目 ({count})",
-    "addedToRPCDownloadQueue": "已添加到 RPC 下载队列"
+    "addedToRPCDownloadQueue": "已添加到 RPC 下载队列",
+    "keywords": "下载,百度网盘,RPC,API"
   },
   "HomePage": {
     "title": "FBD",
@@ -107,6 +113,7 @@
     "getStarted": "开始使用",
     "description": "快速解析百度网盘链接",
     "howToUse": "使用教程",
+    "keywords": "百度网盘,解析,下载,云存储",
     "totalParsed": "已解析文件",
     "totalParsedDesc": "个文件成功解析",
     "activeUsers": "活跃用户",

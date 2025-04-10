@@ -1,7 +1,27 @@
+import { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { FaCloudDownloadAlt, FaBolt, FaShieldAlt, FaUserFriends } from 'react-icons/fa';
 import Image from 'next/image';
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('HomePage');
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: [t('keywords')],
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+    },
+    twitter: {
+      title: t('title'),
+      description: t('description'),
+    },
+  };
+}
 
 export default function Home() {
   const t = useTranslations('HomePage');

@@ -21,7 +21,7 @@ const useCommonStore = create<CommonStore>()(
   persist(
     (set) => ({
       verifyCode: '',
-      theme: 'light',
+      theme: 'cupcake',
       uuid: '',
       isInitialized: false,
       currentStep: 1,

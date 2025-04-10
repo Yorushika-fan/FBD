@@ -5,6 +5,7 @@
     "getStarted": "始めましょう",
     "description": "Baidu Netdiskリンクを素早く解析",
     "howToUse": "チュートリアル",
+    "keywords": "Baidu Netdisk, 解析, ダウンロード, クラウドストレージ",
     "totalParsed": "解析済みファイル",
     "totalParsedDesc": "ファイルが正常に解析されました",
     "activeUsers": "アクティブユーザー",
@@ -49,7 +50,8 @@
     "title": "自己紹介",
     "description": "私はNext.jsを学んでいる初心者で、このプロジェクトは私の最初のNext.jsプロジェクトです。気に入っていただければ幸いです。",
     "skills": "スキル",
-    "contact": "お問い合わせ"
+    "contact": "お問い合わせ",
+    "keywords": "Next.js, React, TypeScript, フロントエンド開発"
   },
   "parse": {
     "step1": "リンクを入力",
@@ -117,6 +119,7 @@
   },
   "Download": {
     "title": "クラウド解析ダウンロード",
+    "description": "Baidu Netdiskファイルを素早くダウンロード、APIとRPCの両方のダウンロード方法をサポート",
     "selectDownloadMethod": "ダウンロード方法を選択",
     "apiDownload": "APIダウンロード",
     "rpcDownload": "RPCダウンロード",
@@ -135,6 +138,7 @@
     "noDownloadableFiles": "ダウンロード可能なファイルがありません",
     "gettingDownloadLink": "ダウンロードリンクを取得中...",
     "downloadSelectedItems": "選択した項目をダウンロード ({count})",
-    "addedToRPCDownloadQueue": "RPCダウンロードキューに追加されました"
+    "addedToRPCDownloadQueue": "RPCダウンロードキューに追加されました",
+    "keywords": "ダウンロード, Baidu Netdisk, RPC, API"
   }
 }

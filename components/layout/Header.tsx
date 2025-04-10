@@ -23,7 +23,7 @@ const Header = () => {
   ];
 
   const handleThemeChange = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
+    const newTheme = theme === 'cupcake' ? 'dark' : 'cupcake';
     setTheme(newTheme);
     document.documentElement.setAttribute('data-theme', newTheme);
   };

@@ -5,6 +5,7 @@
     "getStarted": "Inizia",
     "description": "Analizza rapidamente i link Baidu Netdisk",
     "howToUse": "Tutorial",
+    "keywords": "Baidu Netdisk, Analisi, Download, Archiviazione cloud",
     "totalParsed": "File analizzati",
     "totalParsedDesc": "file analizzati con successo",
     "activeUsers": "Utenti attivi",
@@ -47,7 +48,8 @@
     "title": "Chi sono",
     "description": "Sono un principiante che sta imparando Next.js, e questo progetto è il mio primo progetto Next.js. Spero che ti piaccia.",
     "skills": "Le mie competenze",
-    "contact": "Contattami"
+    "contact": "Contattami",
+    "keywords": "Next.js, React, TypeScript, Sviluppo Frontend"
   },
   "parse": {
     "step1": "Inserisci link",
@@ -115,6 +117,7 @@
   },
   "Download": {
     "title": "Download analisi cloud",
+    "description": "Scarica rapidamente file da Baidu Netdisk, supporta metodi di download API e RPC",
     "selectDownloadMethod": "Seleziona metodo di download",
     "apiDownload": "Download API",
     "rpcDownload": "Download RPC",
@@ -133,7 +136,8 @@
     "noDownloadableFiles": "Nessun file scaricabile",
     "gettingDownloadLink": "Recupero link di download...",
     "downloadSelectedItems": "Scarica elementi selezionati ({count})",
-    "addedToRPCDownloadQueue": "Aggiunto alla coda di download RPC"
+    "addedToRPCDownloadQueue": "Aggiunto alla coda di download RPC",
+    "keywords": "Download, Baidu Netdisk, RPC, API"
   },
   "hello-there": "",
   "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": ""

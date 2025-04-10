@@ -1,4 +1,24 @@
 import { useTranslations } from 'next-intl';
+import { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('HowToUse');
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: [t('keywords')],
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+    },
+    twitter: {
+      title: t('title'),
+      description: t('description'),
+    },
+  };
+}
 
 export default function HowToUsePage() {
   const t = useTranslations('HowToUse');

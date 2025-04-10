@@ -5,6 +5,7 @@
     "getStarted": "Loslegen",
     "description": "Baidu Netdisk Links schnell analysieren",
     "howToUse": "Tutorial",
+    "keywords": "Baidu Netdisk, Analyse, Download, Cloud-Speicher",
     "totalParsed": "Analysierte Dateien",
     "totalParsedDesc": "Dateien erfolgreich analysiert",
     "activeUsers": "Aktive Benutzer",
@@ -47,7 +48,8 @@
     "title": "Über mich",
     "description": "Ich bin ein Anfänger, der Next.js lernt, und dieses Projekt ist mein erstes Next.js-Projekt. Ich hoffe, es gefällt dir.",
     "skills": "Meine Fähigkeiten",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "keywords": "Next.js, React, TypeScript, Frontend-Entwicklung"
   },
   "parse": {
     "step1": "Link eingeben",
@@ -115,6 +117,7 @@
   },
   "Download": {
     "title": "Cloud Analyse Download",
+    "description": "Baidu Netdisk Dateien schnell herunterladen, unterstützt API- und RPC-Download-Methoden",
     "selectDownloadMethod": "Download-Methode auswählen",
     "apiDownload": "API Download",
     "rpcDownload": "RPC Download",
@@ -133,6 +136,7 @@
     "noDownloadableFiles": "Keine herunterladbaren Dateien",
     "gettingDownloadLink": "Download-Link wird abgerufen...",
     "downloadSelectedItems": "Ausgewählte Elemente herunterladen ({count})",
-    "addedToRPCDownloadQueue": "Zur RPC-Download-Warteschlange hinzugefügt"
+    "addedToRPCDownloadQueue": "Zur RPC-Download-Warteschlange hinzugefügt",
+    "keywords": "Download, Baidu Netdisk, RPC, API"
   }
 }

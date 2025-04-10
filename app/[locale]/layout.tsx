@@ -9,6 +9,10 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Toaster } from 'sonner';
 import GlobalLoading from '@/components/GlobalLoading';
+import { defaultMetadata } from '@/app/metadata';
+
+export const metadata = defaultMetadata;
+
 export default async function LocaleLayout({
   children,
   params,
@@ -26,6 +30,10 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} data-theme="cupcake">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className="flex min-h-screen flex-col">
         <NextIntlClientProvider messages={messages}>
           <GlobalLoading />

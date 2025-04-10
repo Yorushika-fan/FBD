@@ -5,10 +5,23 @@
     "getStarted": "Начать",
     "description": "Быстрый анализ ссылок Baidu Netdisk",
     "howToUse": "Учебник",
+    "keywords": "Baidu Netdisk, Анализ, Скачивание, Облачное хранилище",
+    "totalParsed": "Проанализировано файлов",
+    "totalParsedDesc": "файлов успешно проанализировано",
+    "activeUsers": "Активные пользователи",
+    "activeUsersDesc": "пользователей онлайн",
+    "successRate": "Успешность",
+    "successRateDesc": "Стабильно и надежно",
+    "featuresTitle": "Основные функции",
+    "totalDownloads": "Всего скачиваний",
+    "totalDownloadsDesc": "скачиваний файлов",
     "features": {
       "fast": "Быстрый анализ",
       "stable": "Стабильный и надежный",
-      "simple": "Простой и легкий"
+      "simple": "Простой и легкий",
+      "fastDesc": "Быстрый анализ, без ожидания, мгновенные ссылки для скачивания",
+      "stableDesc": "Стабильный и надежный, успешность анализа 99.9%",
+      "simpleDesc": "Простой и легкий, скачивание файлов в три шага"
     },
     "actions": {
       "parse": "Начать анализ",
@@ -35,7 +48,8 @@
     "title": "Обо мне",
     "description": "Я начинающий, изучающий Next.js, и это мой первый проект на Next.js. Надеюсь, вам понравится.",
     "skills": "Мои навыки",
-    "contact": "Связаться со мной"
+    "contact": "Связаться со мной",
+    "keywords": "Next.js, React, TypeScript, Frontend разработка"
   },
   "parse": {
     "step1": "Введите ссылку",
@@ -48,7 +62,10 @@
     "download": "Скачать файлы",
     "success": "Проверка успешна! Теперь вы можете скачать файлы.",
     "inputUrl": "Ссылка Baidu Netdisk",
+    "inputUrlPlaceholder": "Введите ссылку Baidu Netdisk",
+    "inputUrlHint": "Введите правильную ссылку Baidu Netdisk",
     "inputPassword": "Код извлечения",
+    "inputPasswordPlaceholder": "Введите код извлечения",
     "inputPasswordHint": "Пожалуйста, введите правильный код извлечения",
     "parse": "Анализировать",
     "pasteSuccess": "Код извлечения найден, автоматическое заполнение",
@@ -100,10 +117,14 @@
   },
   "Download": {
     "title": "Скачать облачный анализ",
+    "description": "Быстрое скачивание файлов Baidu Netdisk, поддерживает методы скачивания API и RPC",
     "selectDownloadMethod": "Выберите метод скачивания",
     "apiDownload": "Скачать через API",
     "rpcDownload": "Скачать через RPC",
     "rpcAddress": "Адрес RPC",
+    "rpcAddressPlaceholder": "Введите адрес RPC",
+    "rpcAddressHint": "Введите правильный адрес RPC",
+    "noFiles": "Сначала проанализируйте ссылку, перенаправление...",
     "testConnection": "Проверить подключение",
     "connected": "Подключено (Aria2 {version})",
     "notConnected": "Не подключено",
@@ -115,6 +136,7 @@
     "noDownloadableFiles": "Нет файлов для скачивания",
     "gettingDownloadLink": "Получение ссылки для скачивания...",
     "downloadSelectedItems": "Скачать выбранные элементы ({count})",
-    "addedToRPCDownloadQueue": "Добавлено в очередь загрузки RPC"
+    "addedToRPCDownloadQueue": "Добавлено в очередь загрузки RPC",
+    "keywords": "Скачивание, Baidu Netdisk, RPC, API"
   }
 }
