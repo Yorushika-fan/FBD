@@ -65,17 +65,19 @@ export default function Home() {
 
             {/* Right Logo */}
             <div className="mt-12 flex flex-1 items-center justify-center lg:mt-0">
-              <div className="relative w-full max-w-lg">
-                <div className="from-primary/20 to-secondary/20 absolute inset-0 rounded-full bg-gradient-to-br blur-3xl"></div>
-                <div className="relative z-10 p-8">
-                  <Image
-                    src="/images/logo.png"
-                    alt="Cloud Storage Logo"
-                    width={500}
-                    height={500}
-                    className="h-auto w-full rounded-2xl object-contain shadow-2xl"
-                    priority
-                  />
+              <div className="relative w-full max-w-xs">
+                <div className="from-primary/20 to-secondary/20 absolute inset-0 rounded-full bg-gradient-to-br blur-3xl dark:from-primary/10 dark:to-secondary/10"></div>
+                <div className="relative z-10 p-4">
+                  <div className="animate-pulse-slow">
+                    <Image
+                      src="/images/logo.svg"
+                      alt="Cloud Storage Logo"
+                      width={300}
+                      height={300}
+                      className="h-auto w-full rounded-2xl object-contain shadow-2xl dark:brightness-110"
+                      priority
+                    />
+                  </div>
                 </div>
               </div>
             </div>

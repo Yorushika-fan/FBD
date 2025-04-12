@@ -138,5 +138,10 @@
       "linkInput": "Silakan masukkan tautan berbagi Baidu Netdisk",
       "codeInput": "Silakan masukkan kode ekstraksi (jika ada)"
     }
+  },
+  "Footer": {
+    "title": "FBD",
+    "description": "FBD adalah alat analisis Baidu Netdisk yang mendukung analisis cepat tautan Baidu Netdisk dan menyediakan fungsionalitas unduh.",
+    "keywords": "Baidu Netdisk, Analisis, Unduh, Penyimpanan Cloud"
   }
 }

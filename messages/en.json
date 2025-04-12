@@ -138,5 +138,10 @@
       "linkInput": "Please enter Baidu Netdisk share link",
       "codeInput": "Please enter extraction code (if any)"
     }
+  },
+  "Footer": {
+    "title": "FBD",
+    "description": "FBD is a Baidu Netdisk parsing tool that supports quick parsing of Baidu Netdisk links and provides download functionality.",
+    "keywords": "Baidu Netdisk, Parse, Download, Cloud Storage"
   }
 }

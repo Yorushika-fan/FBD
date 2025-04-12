@@ -6,13 +6,14 @@ import { Menu, X } from 'lucide-react';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { useTranslations, useLocale } from 'next-intl';
 import useCommonStore from '@/store/common';
-import GlobalLoading from '@/components/GlobalLoading';
+
 
 const Header = () => {
-  const { theme, setTheme, isInitialized } = useCommonStore();
+  const { theme, setTheme } = useCommonStore();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const t = useTranslations('Menu');
   const locale = useLocale();
+
 
   const navigation = [
     { name: t('home'), href: '/' },
@@ -29,24 +30,17 @@ const Header = () => {
   };
 
   useEffect(() => {
-    if (isInitialized) {
-      document.documentElement.setAttribute('data-theme', theme);
-    }
-  }, [theme, isInitialized]);
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
 
-  if (!isInitialized) {
-    return <GlobalLoading />;
-  }
 
   return (
     <div className="navbar bg-base-100">
       {/* Mobile drawer button */}
       <div className="navbar-start">
-        <div className="drawer-content lg:hidden">
-          <button className="btn btn-square btn-ghost" onClick={() => setIsDrawerOpen(true)} aria-label="打开菜单">
-            <Menu className="h-6 w-6" />
-          </button>
-        </div>
+        <button className="btn btn-square btn-ghost lg:hidden" onClick={() => setIsDrawerOpen(true)} aria-label="打开菜单">
+          <Menu className="h-6 w-6" />
+        </button>
         {/* Logo and site name */}
         <Link href="/" className="btn btn-ghost text-xl">
           <span className="font-bold">FBD</span>
@@ -87,28 +81,30 @@ const Header = () => {
       </div>
 
       {/* Mobile drawer */}
-      <div className={`drawer-side z-50 lg:hidden ${isDrawerOpen ? 'fixed inset-0' : 'hidden'}`}>
-        <div className="drawer-overlay" onClick={() => setIsDrawerOpen(false)}></div>
-        <div className="menu bg-base-200 min-h-full w-80 p-4">
-          <div className="mb-4 flex items-center justify-between">
-            <Link href="/" className="btn btn-ghost text-xl">
-              <span className="font-bold">LOGO</span>
-            </Link>
-            <button className="btn btn-square btn-ghost" onClick={() => setIsDrawerOpen(false)} aria-label="关闭菜单">
-              <X className="h-6 w-6" />
-            </button>
+      {isDrawerOpen && (
+        <div className="fixed inset-0 z-50 lg:hidden">
+          <div className="fixed inset-0 bg-black/50" onClick={() => setIsDrawerOpen(false)}></div>
+          <div className="fixed right-0 top-0 h-full w-80 bg-base-200 p-4">
+            <div className="mb-4 flex items-center justify-between">
+              <Link href="/" className="btn btn-ghost text-xl">
+                <span className="font-bold">FBD</span>
+              </Link>
+              <button className="btn btn-square btn-ghost" onClick={() => setIsDrawerOpen(false)} aria-label="关闭菜单">
+                <X className="h-6 w-6" />
+              </button>
+            </div>
+            <ul className="menu gap-2">
+              {navigation.map((item) => (
+                <li key={`${item.name}-${locale}`}>
+                  <Link href={item.href} className="hover:bg-base-300" onClick={() => setIsDrawerOpen(false)}>
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul className="menu gap-2">
-            {navigation.map((item) => (
-              <li key={`${item.name}-${locale}`}>
-                <Link href={item.href} className="hover:bg-base-300" onClick={() => setIsDrawerOpen(false)}>
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
         </div>
-      </div>
+      )}
     </div>
   );
 };

@@ -140,5 +140,10 @@
     "downloadSelectedItems": "選択した項目をダウンロード ({count})",
     "addedToRPCDownloadQueue": "RPCダウンロードキューに追加されました",
     "keywords": "ダウンロード, Baidu Netdisk, RPC, API"
+  },
+  "Footer": {
+    "title": "FBD",
+    "description": "FBDはBaidu Netdisk解析ツールで、Baidu Netdiskリンクの素早い解析とダウンロード機能を提供します。",
+    "keywords": "Baidu Netdisk, 解析, ダウンロード, クラウドストレージ"
   }
 }

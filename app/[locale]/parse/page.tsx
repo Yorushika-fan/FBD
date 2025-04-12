@@ -63,7 +63,7 @@ const Download = () => {
               <div className="mb-4 flex items-center justify-between">
                 <h2 className="card-title">{t('verifyPassword')}</h2>
                 <div className="flex gap-2">
-                  <Link href="/get-password" className="btn btn-sm btn-outline btn-primary">
+                  <Link href="/get-pwd" className="btn btn-sm btn-outline btn-primary">
                     {t('getPassword')}
                   </Link>
                   <button className="btn btn-sm btn-outline btn-error" onClick={handleReset}>

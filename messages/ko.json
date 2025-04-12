@@ -138,5 +138,10 @@
     "downloadSelectedItems": "선택한 항목 다운로드 ({count})",
     "addedToRPCDownloadQueue": "RPC 다운로드 대기열에 추가되었습니다",
     "keywords": "다운로드, Baidu Netdisk, RPC, API"
+  },
+  "Footer": {
+    "title": "FBD",
+    "description": "FBD는 Baidu Netdisk 분석 도구로, Baidu Netdisk 링크의 빠른 분석과 다운로드 기능을 제공합니다.",
+    "keywords": "Baidu Netdisk, 분석, 다운로드, 클라우드 스토리지"
   }
 }

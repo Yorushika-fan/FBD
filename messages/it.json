@@ -139,6 +139,9 @@
     "addedToRPCDownloadQueue": "Aggiunto alla coda di download RPC",
     "keywords": "Download, Baidu Netdisk, RPC, API"
   },
-  "hello-there": "",
-  "provident-cupiditate-voluptatem-et-in-quaerat-fugiat-ut-assumenda-excepturi-exercitationem-quasi-in-deleniti-eaque-aut-repudiandae-et-a-id-nisi": ""
+  "Footer": {
+    "title": "FBD",
+    "description": "FBD è uno strumento di analisi Baidu Netdisk che supporta l'analisi rapida dei link Baidu Netdisk e fornisce funzionalità di download.",
+    "keywords": "Baidu Netdisk, Analisi, Download, Archiviazione cloud"
+  }
 }

@@ -138,5 +138,10 @@
     "downloadSelectedItems": "चयनित आइटम डाउनलोड करें ({count})",
     "addedToRPCDownloadQueue": "RPC डाउनलोड कतार में जोड़ा गया",
     "keywords": "डाउनलोड, Baidu Netdisk, RPC, API"
+  },
+  "Footer": {
+    "title": "FBD",
+    "description": "FBD एक Baidu Netdisk विश्लेषण उपकरण है जो Baidu Netdisk लिंक्स के तेजी से विश्लेषण का समर्थन करता है और डाउनलोड कार्यक्षमता प्रदान करता है।",
+    "keywords": "Baidu Netdisk, विश्लेषण, डाउनलोड, क्लाउड स्टोरेज"
   }
 }

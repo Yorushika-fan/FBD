@@ -140,5 +140,10 @@
     "downloadSelectedItems": "تحميل العناصر المحددة ({count})",
     "addedToRPCDownloadQueue": "تمت إضافته إلى قائمة انتظار تحميل RPC",
     "keywords": "تحميل, Baidu Netdisk, RPC, API"
+  },
+  "Footer": {
+    "title": "FBD",
+    "description": "FBD هو أداة تحليل Baidu Netdisk تدعم التحليل السريع لروابط Baidu Netdisk وتوفر وظيفة التحميل.",
+    "keywords": "Baidu Netdisk, تحليل, تحميل, تخزين سحابي"
   }
 }
